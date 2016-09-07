@@ -1,0 +1,82 @@
+<%-- 
+    Document   : index
+    Created on : Sep 7, 2016, 3:12:19 PM
+    Author     : Savinda Keshan
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title> Maharajah palace </title>
+        <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script src="js/map.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Fanwood+Text" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+    </head>
+    <body>
+        <div>
+            <div class="navbar">
+              <a href="index.html"><img class="logo" src="img/logo1.png" width="20%" ></a> 
+                 <div class="nav"> 
+                     <ul>
+                      <li><a href="nav/menu.html">Menu</a> </li>
+                      <li><a href="nav/res.html">Reservation</a> </li>
+                      <li><a href="nav/reviews.html">Reviews</a> </li>
+                      <li><a href="nav/promot.html">Promotion</a> </li>
+                      <li><a href="login/login.html">Login</a></li>      
+                    </ul>
+                </div>
+              </div>
+          </div>
+        <!--Home section-->
+    <section id="home">
+        <div class="home-content">
+            <div>
+            <p class="text-align">An authentic Indian Restaurant <br>
+             with a vast array of North Indian dishes</p>
+            </div>
+        </div>
+        </section>
+        <section>
+            <div class="content">
+                <h2 class="h2">About Us</h2>
+                  <table class="table">
+                      <tr>
+                      <td class="td1" colspan="4" rowspan="4">
+                        <h4>Contact Info</h4>
+                    <p class="para">
+                        The Maharaja place<br>
+                        1A,Rajakeeya Mawatha,Colombo-07<br>
+                        <br>
+                        Telephone:011 4 886000<br>
+                        Email:maharajaplacecolombo@gmail.com<br>
+                    </p>
+                       </td>
+                      <td colspan="3" rowspan="4">
+                            <p class="para"> Main outlet : <br>
+                                The Maharaja place<br>
+                                1A,Rajakeeya Mawatha,Colombo-07
+                              <br>
+                              <br>
+                              <br>
+                                Partner Restaurant :<br>
+                                No.82, Dharamapola <br>
+                                Mawatha, Colombo-03<br>
+                                <br>
+                                Telephone : 0117620620
+                              
+                              </p>
+                          </td>
+                          <td class="td2" colspan="4" rowspan="6">
+                          <h3>Our Location </h3>
+                          
+                    <div id="googleMap" style="width:500px;height:400px;"></div>
+                    </td>
+                    </tr>
+                </table>
+        </section>
+    </body>
+</html>
