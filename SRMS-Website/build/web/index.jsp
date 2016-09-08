@@ -48,7 +48,7 @@
                               <p class="para">  
                           Maharaja Palace is one of the few fine dining Indian restaurants in Colombo. 
                           The restaurant is designed in a way capturing the essence of the Indian culture.A dinner at the Maharaja Palace is not just about eating out. 
-                          It’s more like a journey through the culinary traditions of a great era. Visit us and feel the romance of Maharaja Palace.  
+                            It’s more like a journey through the culinary traditions of a great era. Visit us and feel the romance of Maharaja Palace.  
                               </p>
                           </td>
                           <td class="td2"></td>
