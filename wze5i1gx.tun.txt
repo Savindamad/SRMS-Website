@@ -1,0 +1,41 @@
+﻿Merge remote-tracking branch 'origin/master'
+
+# Conflicts:
+#	SRMS-Website/nbproject/private/private.properties
+#	SRMS-Website/nbproject/private/private.xml
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 2 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	modified:   SRMS-Website/build/web/css/stylesheet.css
+#	modified:   SRMS-Website/build/web/index.jsp
+#	deleted:    SRMS-Website/build/web/nav/contact.html
+#	modified:   SRMS-Website/build/web/nav/menu.html
+#	modified:   SRMS-Website/build/web/nav/promot.html
+#	modified:   SRMS-Website/build/web/nav/res.html
+#	modified:   SRMS-Website/build/web/nav/reviews.html
+#	modified:   SRMS-Website/nbproject/private/private.properties
+#	modified:   SRMS-Website/nbproject/private/private.xml
+#	modified:   SRMS-Website/web/css/stylesheet.css
+#	modified:   SRMS-Website/web/index.jsp
+#	deleted:    SRMS-Website/web/nav/contact.html
+#	modified:   SRMS-Website/web/nav/menu.html
+#	modified:   SRMS-Website/web/nav/promot.html
+#	modified:   SRMS-Website/web/nav/res.html
+#	modified:   SRMS-Website/web/nav/reviews.html
+#
+

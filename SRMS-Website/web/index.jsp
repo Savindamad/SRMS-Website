@@ -26,7 +26,7 @@
                       <li><a href="nav/res.html">Reservation</a> </li>
                       <li><a href="nav/reviews.html">Reviews</a> </li>
                       <li><a href="nav/promot.html">Promotion</a> </li>
-                      <li><a href="login/login.html">Login</a></li>      
+                      <li><a class="login" href="login/login.html">Login</a></li>      
                     </ul>
                 </div>
               </div>
@@ -42,10 +42,24 @@
         </section>
         <section>
             <div class="content">
-                <h2 class="h2">About Us</h2>
                   <table class="table">
                       <tr>
-                      <td class="td1" colspan="4" rowspan="4">
+                          <td class="td1" colspan="4"><h4> About Us</h4> 
+                              <p class="para">  
+                          Maharaja Palace is one of the few fine dining Indian restaurants in Colombo. 
+                          The restaurant is designed in a way capturing the essence of the Indian culture.A dinner at the Maharaja Palace is not just about eating out. 
+                          It’s more like a journey through the culinary traditions of a great era. Visit us and feel the romance of Maharaja Palace.  
+                              </p>
+                          </td>
+                          <td class="td2"></td>
+                          <td class="td3" colspan="4" rowspan="6">
+                          <h3>Our Location </h3>
+                          
+                          <div id="googleMap" style="width:500px;height:400px;"></div>
+                          </td>
+                      </tr>
+                      <tr>
+                      <td class="td1" colspan="4">
                         <h4>Contact Info</h4>
                     <p class="para">
                         The Maharaja place<br>
@@ -55,26 +69,6 @@
                         Email:maharajaplacecolombo@gmail.com<br>
                     </p>
                        </td>
-                      <td colspan="3" rowspan="4">
-                            <p class="para"> Main outlet : <br>
-                                The Maharaja place<br>
-                                1A,Rajakeeya Mawatha,Colombo-07
-                              <br>
-                              <br>
-                              <br>
-                                Partner Restaurant :<br>
-                                No.82, Dharamapola <br>
-                                Mawatha, Colombo-03<br>
-                                <br>
-                                Telephone : 0117620620
-                              
-                              </p>
-                          </td>
-                          <td class="td2" colspan="4" rowspan="6">
-                          <h3>Our Location </h3>
-                          
-                    <div id="googleMap" style="width:500px;height:400px;"></div>
-                    </td>
                     </tr>
                 </table>
         </section>
