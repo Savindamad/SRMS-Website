@@ -1,3 +1,11 @@
+<%-- 
+    Document   : signup
+    Created on : Sep 8, 2016, 5:39:29 PM
+    Author     : Savinda Keshan
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     <head>
         <style>

@@ -1,3 +1,11 @@
+<%-- 
+    Document   : login
+    Created on : Sep 8, 2016, 5:36:52 PM
+    Author     : Savinda Keshan
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
     <head><title> Login Page </title>
         <style>
@@ -70,7 +78,7 @@
                 <td colspan="2" align="center"><input type="submit" class="button" value="Login">
                 </tr>
             <tr>
-                <td colspan="2" align="center"><a href="signup.html">Not a member Sign up here</a></td>
+                <td colspan="2" align="center"><a href="signup.jsp">Not a member Sign up here</a></td>
         </tr>
             </table>
     </body>

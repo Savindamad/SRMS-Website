@@ -26,7 +26,7 @@
                       <li><a href="nav/res.html">Reservation</a> </li>
                       <li><a href="nav/reviews.html">Reviews</a> </li>
                       <li><a href="nav/promot.html">Promotion</a> </li>
-                      <li><a class="login" href="login/login.html">Login</a></li>      
+                      <li><a class="login" href="login/login.jsp">Login</a></li>      
                     </ul>
                 </div>
               </div>
