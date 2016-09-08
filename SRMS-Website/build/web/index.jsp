@@ -44,7 +44,7 @@
             <div class="content">
                   <table class="table">
                       <tr>
-                          <td class="td1" colspan="4"><h4> About Us</h4> 
+                          <td class="td1" colspan="4"><h3> About Us</h3> 
                               <p class="para">  
                           Maharaja Palace is one of the few fine dining Indian restaurants in Colombo. 
                           The restaurant is designed in a way capturing the essence of the Indian culture.A dinner at the Maharaja Palace is not just about eating out. 
@@ -60,7 +60,7 @@
                       </tr>
                       <tr>
                       <td class="td1" colspan="4">
-                        <h4>Contact Info</h4>
+                        <h3>Contact Info</h3>
                     <p class="para">
                         The Maharaja place<br>
                         1A,Rajakeeya Mawatha,Colombo-07<br>
