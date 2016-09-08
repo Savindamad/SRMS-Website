@@ -206,7 +206,7 @@
             }
             
             .form{
-                margin-left: 60px;
+                margin-left: 80px;
                 margin-top: 20px;
                 border-radius:0.3em;
                 border: 1px solid black;
@@ -228,7 +228,7 @@
             
 
             .header , .footer{
-                border: 1px solid black;
+                border-top: 1px solid black;
                 padding: 1em;
                 height: 100px;
             }
@@ -244,6 +244,21 @@
                 margin-top: 250px;
                 margin-left: 20px;
                 font-size: 35px;  
+            }
+            
+            .p{
+                margin-left: 120px;
+                width: 75%;
+            }
+            .terms {
+                margin-top: 30px;
+                margin-left: 120px;
+            }
+            
+            .title {
+                text-align: center;
+                margin-top: 10px;
+                font-size: 30px;
             }
 
 /* menu */
