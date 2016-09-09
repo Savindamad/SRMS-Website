@@ -22,11 +22,11 @@
               <a href="index.html"><img class="logo" src="img/logo1.png" width="20%" ></a> 
                  <div class="nav"> 
                      <ul>
-                      <li><a href="nav/menu.html">Men</a> </li>
+                      <li><a href="nav/menu.html">Menu</a> </li>
                       <li><a href="nav/res.html">Reservation</a> </li>
                       <li><a href="nav/reviews.html">Reviews</a> </li>
                       <li><a href="nav/promot.html">Promotion</a> </li>
-                      <li><a class="login" href="login/login.jsp">Login</a></li>      
+                      <li><a class="login" href="login.jsp">Login</a></li>      
                     </ul>
                 </div>
               </div>
