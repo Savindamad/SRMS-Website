@@ -47,6 +47,7 @@
     
     </head>
 <body>
+    <form action="SignUp" method="post">
     <table>
         <tr>
             <td class="td1" align="center"><h3>Register Here</h3></td>
@@ -55,32 +56,28 @@
             <td colspan="2"> Your Personal Information </td>
         </tr>
         <tr>
-        <td colspan="2"> <input type="text" placeholder="First Name"></td>
-        </tr>
-        <tr>
-        <td colspan="2"> <input type="text" placeholder="Last Name"></td>
+        <td colspan="2"> <input type="text" name="name" placeholder="Name"></td>
         </tr>
         <tr>
             <td colspan="2"> Your Address </td>
         </tr>
         <tr>
-        <td colspan="2"> <input type="text" placeholder="E-mail"></td>
+        <td colspan="2"> <input type="text" name="email"placeholder="E-mail"></td>
         </tr>
         <tr>
             <td colspan="2"> Your Password </td>
         </tr>
         <tr>
-        <td colspan="2"> <input type="text" placeholder="Password"></td>
+        <td colspan="2"> <input type="text" name="password" placeholder="Password"></td>
         </tr>
          <tr>
-        <td colspan="2"> <input type="text" placeholder="Retype Password"></td>
+        <td colspan="2"> <input type="text" name="rePassword" placeholder="Retype Password"></td>
         </tr>
          <tr>
         <td colspan="2" align="center"> <input type="submit" value="Submit" ></td>
         </tr>
         
-        
-        
     </table>
+    </form>
     </body>
 </html>
