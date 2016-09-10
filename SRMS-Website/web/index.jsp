@@ -15,6 +15,8 @@
         <script src="js/map.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Fanwood+Text" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Montez" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
     </head>
     <body>
         <div>

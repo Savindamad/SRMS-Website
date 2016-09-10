@@ -56,7 +56,7 @@
                 display: inline-block;
                 color:white;
                 font-size:17px;
-                font-family:'Fanwood Text', serif;
+                font-family: 'Nunito', sans-serif;
                 text-align: center;
                 padding: 10px 5px;
                
@@ -167,6 +167,7 @@
                 padding: 10px;
                 color: gray;
                 font-size: 18px;
+                font-family: 'Nunito', sans-serif;
             }
            
 
@@ -175,7 +176,7 @@
             #res {
                 height: 600px;
                 padding:10px;
-                background-image: url(../img/tables.jpg);
+                background-image: url(../img/reservation.png);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -241,9 +242,10 @@
             }
             
             .p3 {
-                margin-top: 250px;
-                margin-left: 20px;
-                font-size: 35px;  
+                margin-top: 400px;
+                margin-left: 30px;
+                font-size: 30px;
+                font-family: 'Architects Daughter', cursive;
             }
             
             .p{
@@ -267,7 +269,7 @@
             #menu {
                 height: 600px;
                 padding:10px;
-                background-image: url(../img/menumain.jpg);
+                background-image: url(../img/menu.png);
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-attachment: fixed;
@@ -352,9 +354,10 @@
             }
             
             .p1 {
-                margin-top: 150px;
-                margin-left: 20px;
-                font-size: 35px;
+                margin-top: 200px;
+                margin-left: 60px;
+                font-size: 30px;
+                font-family: 'Architects Daughter', cursive;
             }
 
 /* promotion */ 
@@ -362,7 +365,7 @@
             #promo {
                 height: 600px;
                 padding:10px;
-                background-image: url(../img/prom.jpg);
+                background-image: url(../img/promosion.png);
                 background-repeat: no-repeat;
                 background-size: cover;
                 background-attachment: fixed;
@@ -373,9 +376,10 @@
             }
             
             .p4{
-                margin-top: 250px;
-                margin-left: 20px;
-                font-size: 35px; 
+                margin-top: 400px;
+                margin-left: 30px;
+                font-size: 30px; 
+                font-family: 'Architects Daughter', cursive;
             }
             
 /* contact us */ 
@@ -383,7 +387,7 @@
             #reviews {
                 height: 600px;
                 padding:10px;
-                background-image: url(../img/writereview.jpg);
+                background-image: url(../img/reviews.png);
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
@@ -394,9 +398,10 @@
             }
             
             .p2 {
-                margin-top: 150px;
-                margin-left: 20px;
-                font-size: 35px;
+                margin-top: 400px;
+                margin-left: 30px;
+                font-size: 30px;
+                font-family: 'Architects Daughter', cursive;
             }
     
        
