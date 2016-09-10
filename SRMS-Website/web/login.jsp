@@ -14,72 +14,79 @@
                 background-image:url(../img/res.jpg);
             }
             
-            table {
-               
-                background-color: #fff;
-                opacity:0.7;
-                border:1px solid black;
-                border-radius:0.3em;
-                padding:40px;
-                margin-left:40%;
-                margin-top:20%;
+            .form{
+                margin-left: 200px;
+
             }
+            
+            table{
+                border: 1px solid black;
+                margin-top: 250px;
+                margin-left:650px;
+                border-radius: 0.2em;
+                padding: 10px;
+                height: 50px;
+                background-color: gray;
+                opacity: 0.6;
+                width: 250px;
+                height: 220px;
+            }
+            
             td {
-                padding:4px;
-                border-style: none;
-            
-            }
-            .input {
-                
-                background-color:transparent;
-                width:100%;
-                border:2px solid gray;
                 padding: 5px;
-                border-radius:0.2em;
-                
-                
             }
-            
-            td.img {
-                width:50%;
+            input{
+                width: 100%;
+                height: 20px;
             }
-            
             .button{
-                background-color:violet;
-                border:2px solid gray;
-                margin:2px 2px;
-                width:100%;
-                padding:5px;
-                font-size: 18px;
-                font:blue;
+                width: 100%;
+                height: 30px;
             }
-            
-            .td1 {
-                background-color: black;
-            }
+                
+             
             
         </style>
     </head>
     <body>
-        <table>
-            
-            <tr>
-                <td class="td1" colspan="2"><img src=../img/login.png></td>
-            </tr>
-            
-            <tr>
-                <td colspan="2"><input class="input" type="text" placeholder="Username"></td>
-                </tr>
-            <tr>
-                <td colspan="2"><input class="input" type="password" placeholder="Password"></td>
-                </tr>
-            </tbody>
-            <tr>
-                <td colspan="2" align="center"><input type="submit" class="button" value="Login">
-                </tr>
-            <tr>
-                <td colspan="2" align="center"><a href="signup.jsp">Not a member Sign up here</a></td>
+        <form class="form" name="loginform" onSubmit="return validateForm();" action="main.html" method="post">
+    <table class="table">
+        <tr>
+        <td colspan="2"><img class="img" src="../img/login.png"></td>
         </tr>
-            </table>
+        <tr>
+        <td colspan="2"><input type="text" name="usr" placeholder="username"></td>
+        </tr> 
+        <tr>
+        <td><input type="password" name="pword" placeholder="password"></td>
+        </tr>
+        <tr><td colspan="2" align=center>
+                <input class="button" type="submit" value="Login"/></td></tr>
+        <tr><td colspan="2" align=center>
+    <a href="signup.html">Signup Here</a></td></tr>
+        </table>
+</form>
+    
+    <script>
+    function validateForm() {
+        var un = document.loginform.usr.value;
+        var pw = document.loginform.pword.value;
+        var username = "username"; 
+        var password = "password";
+        if ((un == username) && (pw == password)) {
+            return true;
+        }
+        else {
+            alert ("please check your username and password");
+            return false;
+        }
+  }
+    </script>
+    
+    
+    
     </body>
+    
+    
+    
 </html>
