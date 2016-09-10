@@ -11,7 +11,7 @@
         <style>
             
             body{
-                background-image:url(../img/res.jpg);
+                background-image:url(img/res.jpg);
             }
             
             .form{
@@ -25,15 +25,16 @@
                 margin-left:650px;
                 border-radius: 0.2em;
                 padding: 10px;
-                height: 50px;
-                background-color: gray;
-                opacity: 0.6;
+                height: 100px;
+                background-color: black;
+                opacity: 0.8;
                 width: 250px;
                 height: 220px;
             }
             
             td {
                 padding: 5px;
+                height: 20px;
             }
             input{
                 width: 100%;
@@ -52,7 +53,7 @@
         <form class="form" name="loginform" onSubmit="return validateForm();" action="main.html" method="post">
     <table class="table">
         <tr>
-        <td colspan="2"><img class="img" src="../img/login.png"></td>
+        <td colspan="2"><img ${pageContext.request.contextPath} class="img" src="img/login.png"></td>
         </tr>
         <tr>
         <td colspan="2"><input type="text" name="usr" placeholder="username"></td>
