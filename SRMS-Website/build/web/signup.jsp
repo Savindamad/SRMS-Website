@@ -12,22 +12,23 @@
         <link href="https://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
         <style>
             body {
-                background-image: url(../img/res.jpg);
+                background-image:url(img/res.jpg);
             }
             table {
                 border: 1px solid black;
                 padding: 10px 10px;
                 margin-left: 500px;
                 margin-top: 100px;
-                width: 300px;
-                background-color: gray;
+                width: 350px;
+                background-color: black;
                 border-radius: 0.3em;
-                opacity: 1.5;
+                opacity: 0.8;
                 height: 300px;
             }
 
             h3 {
-                margin-top:0px;
+                
+                margin-top:5px;
                 font-size: 18px;
                 color:darkblue;
             }
@@ -51,7 +52,7 @@
             }
 
             .td1{
-                background-color: gray;
+              background-color:gray; 
                 
                 
             }

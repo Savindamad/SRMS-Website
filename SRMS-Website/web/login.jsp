@@ -64,7 +64,7 @@
         <tr><td colspan="2" align=center>
                 <input class="button" type="submit" value="Login"/></td></tr>
         <tr><td colspan="2" align=center>
-    <a href="signup.html">Signup Here</a></td></tr>
+    <a href="signup.jsp">Signup Here</a></td></tr>
         </table>
 </form>
     
