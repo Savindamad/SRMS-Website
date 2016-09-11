@@ -55,7 +55,8 @@
                             </p>
                             <h3>Opening Hours</h3>
                             <p class="para">
-                            Lunch from 12pm to 3pm / Dinner from 6pm to 12am<br> 
+                            Lunch from 12pm to 3pm<br>
+                            Dinner from 6pm to 12am<br> 
 							(7 Days per week)
 							</p>
                           </td>

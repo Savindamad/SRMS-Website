@@ -256,8 +256,6 @@
                 font-family:'Tangerine', cursive;
                 margin-top: 400px;
                 margin-left: 30px;
-                font-size: 30px;
-                font-family: 'Architects Daughter', cursive;
             }
             
             .p{
@@ -384,16 +382,12 @@
             }
             
             .p1 {
-<<<<<<< HEAD
                 margin-top: 150px;
                 margin-left: 20px;
                 font-size: 60px;
-=======
-                margin-top: 200px;
+                font-family:'Tangerine', cursive;
+                margin-top: 150px;
                 margin-left: 60px;
-                font-size: 30px;
-                font-family: 'Architects Daughter', cursive;
->>>>>>> 321962c43185025d6490e11e1a3e2ea98d84197d
             }
 
 /* promotion */ 
@@ -418,8 +412,6 @@
                 text-align: center; 
                 margin-top: 400px;
                 margin-left: 30px;
-                font-size: 30px; 
-                font-family: 'Architects Daughter', cursive;
                 }
             
 /* contact us */ 
@@ -431,7 +423,7 @@
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                font-family: Californian Fb;
+                font-family:'Tangerine', cursive;
                 font-style: bold;
                 color: white;
                 position: relative;
@@ -445,9 +437,7 @@
                 text-align: center; 
                 margin-top: 400px;
                 margin-left: 30px;
-                font-size: 30px;
-                font-family: 'Architects Daughter', cursive;
-            }
+                }
     
        
             
