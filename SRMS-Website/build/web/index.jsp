@@ -15,7 +15,8 @@
         <script src="js/map.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
-
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
     </head>
     <body>
         <div>
