@@ -27,7 +27,7 @@
                 padding: 10px;
                 height: 100px;
                 background-color: black;
-                opacity: 0.8;
+                opacity: 0.9;
                 width: 250px;
                 height: 220px;
             }
@@ -43,6 +43,7 @@
             .button{
                 width: 100%;
                 height: 30px;
+                background-color: #008fbf;
             }
                 
              

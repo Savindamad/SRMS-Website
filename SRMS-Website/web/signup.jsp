@@ -22,7 +22,7 @@
                 width: 350px;
                 background-color: black;
                 border-radius: 0.3em;
-                opacity: 0.8;
+                opacity: 0.9;
                 height: 300px;
             }
 
@@ -63,6 +63,7 @@
                height: 30px;
                color: black;
                font-family: 'Pontano Sans', sans-serif;
+               background-color: #008fbf;
             }
            
 
@@ -79,28 +80,28 @@
                     <td class="td1" align="center"><h3>Register Here</h3></td>
                 </tr>
                 <tr>
-                    <td colspan="2"> Your Personal Information </td>
+                    <td colspan="2"> Your Personal Information</td>
                 </tr>
                 <tr>
                     <td colspan="2"> <input type="text" name="name" placeholder="Name"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"> Your Address </td>
+                    <td colspan="2"> Your E-mail </td>
                 </tr>
                 <tr>
                     <td colspan="2"> <input type="text" name="email"placeholder="E-mail"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"> Birthday  </td>
+                    <td colspan="2"> Date of Birth  </td>
                 </tr>
                 <tr>
                     <td colspan="2"> <input type="date" name="bod"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"> Contact No </td>
+                    <td colspan="2"> Contact Number </td>
                 </tr>
                 <tr>
-                    <td colspan="2"> <input type="number" name="password" placeholder="Mobile"></td>
+                    <td colspan="2"> <input type="number" name="password" placeholder="Mobile Number"></td>
                 </tr>
                 <tr>
                     <td colspan="2"> Your Password </td>
@@ -109,7 +110,7 @@
                     <td colspan="2"> <input type="password" name="password" placeholder="Password"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"> <input type="password" name="rePassword" placeholder="Retype Password"></td>
+                    <td colspan="2"> <input type="password" name="rePassword" placeholder="Retype your Password"></td>
                 </tr>
                 
                 <tr>
