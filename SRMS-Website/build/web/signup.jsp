@@ -13,12 +13,14 @@
         <style>
             body {
                 background-image:url(img/res.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
             }
             table {
                 border: 1px solid black;
                 padding: 10px 10px;
-                margin-left: 500px;
-                margin-top: 100px;
+                margin-left: 800px;
+                margin-top: 150px;
                 width: 350px;
                 background-color: black;
                 border-radius: 0.3em;
@@ -47,8 +49,11 @@
               
             }
             input{
-                width: 100%;
-                height: 20px;
+                width: 95%;
+                height: 35px;
+                margin-left: 6px;
+                margin-right: 6px;
+                border-radius: 0.4em;
             }
 
             .td1{
@@ -58,14 +63,29 @@
             }
             .button{
                margin-top: 5px;
-               width: 100%;
+               width: 95%;
                padding: 5px;
-               height: 30px;
+               height: 36px;
+               margin-left: 7px;
+               margin-right: 7px;
+               
                color: black;
                font-family: 'Pontano Sans', sans-serif;
                background-color: #008fbf;
             }
-           
+            
+            .dob {
+                width: 53%;
+                margin-left: 40px;
+            }
+            .l1 {
+                margin-left: 10px;
+            }
+            
+            .img {
+                margin-left: 50px;
+                
+            }
 
 
 
@@ -77,40 +97,25 @@
         <form action="SignUp" method="post">
             <table>
                 <tr>
-                    <td class="td1" align="center"><h3>Register Here</h3></td>
+                    <td colspan="2"><img class="img" src="img/login.png"</td>
                 </tr>
                 <tr>
-                    <td colspan="2"> Your Personal Information</td>
+                    <td colspan="2"> <input type="text" name="name" placeholder="Name" required="required"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"> <input type="text" name="name" placeholder="Name"></td>
+                    <td colspan="2"> <input type="text" name="email"placeholder="E-mail" required="required"></td>
+                </tr>             
+                <tr>
+                    <td colspan="2"><label class="l1">Date of Birth</label> <input class="dob" type="date"  name="bod" required="required"></td>
+                </tr>              
+                <tr>
+                    <td colspan="2"> <input type="text" name="password" placeholder="Mobile Number" required="required"></td>
+                </tr>              
+                <tr>
+                    <td colspan="2"> <input type="password" name="password" placeholder="Password" required="required"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"> Your E-mail </td>
-                </tr>
-                <tr>
-                    <td colspan="2"> <input type="text" name="email"placeholder="E-mail"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"> Date of Birth  </td>
-                </tr>
-                <tr>
-                    <td colspan="2"> <input type="date" name="bod"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"> Contact Number </td>
-                </tr>
-                <tr>
-                    <td colspan="2"> <input type="number" name="password" placeholder="Mobile Number"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"> Your Password </td>
-                </tr>
-                <tr>
-                    <td colspan="2"> <input type="password" name="password" placeholder="Password"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"> <input type="password" name="rePassword" placeholder="Retype your Password"></td>
+                    <td colspan="2"> <input type="password" name="rePassword" placeholder="Retype your Password" required="required"></td>
                 </tr>
                 
                 <tr>

@@ -12,6 +12,8 @@
             
             body{
                 background-image:url(img/res.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
             }
             
             .form{
