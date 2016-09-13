@@ -11,7 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title> Maharajah palace </title>
         <link rel="stylesheet" href="css/stylesheet.css" type="text/css">
-        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyD3t29iZ2vzqYXJA1tz8vguzAusKwpYRtM"></script>
         <script src="js/map.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
@@ -44,7 +44,7 @@
         </div>
         </section>
         <section>
-            <div class="content">
+            <div class="section1">
                   <table class="table">
                       <tr>
                           <td class="td1" colspan="4"><h3> About Us</h3> 

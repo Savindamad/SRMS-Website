@@ -99,12 +99,12 @@
                 position: relative;
                 margin-top: 10em;
             }
-            
-            .section {
-                margin:0;
-                padding: 50px 0 30px;
-    
+            .section1 {
+                position: relative;
+                background-color: gray;
+               
             }
+            
 
             .img{
                 position:fixed;
@@ -130,25 +130,26 @@
                 font-family:'Tangerine', cursive;
                 font-style: bold;
                 color: white;
-                border-bottom: 2px solid gold;
+                border-bottom: none;
             
             
             }
 
             .table {
-                background-color: #ffecef;
-                padding: 10px;
-                margin-top: 2px;
+                background-color: white;
+                padding: 10px;            
                 margin-left: 100px;
                 margin-right: 100px;
             }
 
             .td1 {
+                
                 padding: 5px;
   
             }
             
             .td3 {
+               
                 padding: 5px;
                 border: 3px solid blue;
             }
@@ -171,6 +172,7 @@
                 font-size: 16px;
                 font-size: 18px;
             }
+            
            
 
 /* reservation */
