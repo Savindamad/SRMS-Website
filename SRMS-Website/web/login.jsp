@@ -1,8 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : Sep 8, 2016, 5:36:52 PM
-    Author     : Savinda Keshan
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -59,16 +54,16 @@
         </style>
     </head>
     <body>
-        <form class="form" name="loginform" onSubmit="return validateForm();" action="main.html" method="post">
+        <form class="form" name="login" onSubmit="return validateForm();" action="login" method="post">
             <table class="table">
                 <tr>
                     <td colspan="2"><img ${pageContext.request.contextPath} class="img" src="img/login.png"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="text" name="usr" placeholder="username"></td>
+                    <td colspan="2"><input type="text" name="email" placeholder="username"></td>
                 </tr> 
                 <tr>
-                    <td><input type="password" name="pword" placeholder="password"></td>
+                    <td><input type="password" name="password" placeholder="password"></td>
                 </tr>
                 <tr><td colspan="2" align=center>
                         <input class="button" type="submit" value="Login"/></td></tr>

@@ -22,11 +22,10 @@
                 position: fixed;
                 background-color:#1A1919;
                 overflow: hidden;
-                height:50px;
+                height:60px;
                 width:100%;
                 z-index: 1;
-                
-                
+  
             }
             
             .search-bar {
@@ -42,13 +41,17 @@
                 margin: 0;
             }
             .nav li {
-                float:left;
-                margin-right: 10px;
+                float: left;
+                margin-right: 5px;
                 padding:0px 5px;
+            }
+            .nav lilog{
+                
             }
 
             .nav ul {
               float: right;
+              margin-left: 50px; 
               list-style: none;
             }
 

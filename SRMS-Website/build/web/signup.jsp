@@ -94,7 +94,7 @@
 
     </head>
     <body>
-        <form action="SignUp" method="post">
+        <form action="register" method="post">
             <table>
                 <tr>
                     <td colspan="2"><img class="img" src="img/login.png"</td>
@@ -106,10 +106,10 @@
                     <td colspan="2"> <input type="text" name="email"placeholder="E-mail" required="required"></td>
                 </tr>             
                 <tr>
-                    <td colspan="2"><label class="l1">Date of Birth</label> <input class="dob" type="date"  name="bod" required="required"></td>
+                    <td colspan="2"><label class="l1">Date of Birth</label> <input class="dob" type="date"  name="birthday" required="required"></td>
                 </tr>              
                 <tr>
-                    <td colspan="2"> <input type="text" name="password" placeholder="Mobile Number" required="required"></td>
+                    <td colspan="2"> <input type="text" name="contact_no" placeholder="Mobile Number" required="required"></td>
                 </tr>              
                 <tr>
                     <td colspan="2"> <input type="password" name="password" placeholder="Password" required="required"></td>
