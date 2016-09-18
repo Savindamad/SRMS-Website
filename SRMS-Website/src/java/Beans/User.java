@@ -70,7 +70,7 @@ public class User {
             DBConnection dbconn=new DBConnection();
             Connection myconnection= dbconn.connection();
             
-            PreparedStatement ps1 =myconnection.prepareStatement("select * from customer where username=? and email=?");
+            PreparedStatement ps1 =myconnection.prepareStatement("select * from customer where email=? and password=?");
 
             ps1.setString(1, email);
             ps1.setString(2, password);
