@@ -11,7 +11,7 @@ import javax.servlet.http.HttpSession;
 import org.hibernate.validator.constraints.Email;
 
 
-public class login extends HttpServlet {
+public class Login extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

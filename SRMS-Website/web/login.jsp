@@ -54,7 +54,7 @@
         </style>
     </head>
     <body>
-        <form class="form" name="login" onSubmit="return validateForm();" action="login" method="post">
+        <form class="form" name="login" onSubmit="return validateForm();" action="Login" method="post">
             <table class="table">
                 <tr>
                     <td colspan="2"><img ${pageContext.request.contextPath} class="img" src="img/login.png"></td>
