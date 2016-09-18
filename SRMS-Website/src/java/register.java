@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 import Beans.User;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -15,7 +9,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class register extends HttpServlet {
+public class Register extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -31,10 +25,14 @@ public class register extends HttpServlet {
             user.setBirthday(birthday);
             user.setContact_no(request.getParameter("contact_no"));
             
-            user.register();
-            
-            RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-            rd.forward(request,response);
+            if(user.register()){
+                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
+                rd.forward(request,response);
+            }
+            else{
+                out.println("Either username or password is incorrect!"+user.getEmail()+"  "+user.getPassword());
+                out.println("<a href=\"login.jsp\">Try again...</a>");
+            }
             
         }
         finally {out.close();}
