@@ -2,6 +2,7 @@
 package Beans;
 
 import DB.DBConnection;
+import com.sun.org.apache.xpath.internal.axes.HasPositionalPredChecker;
 import java.sql.Connection;
 import java.sql.Date;
 import java.sql.PreparedStatement;
@@ -84,7 +85,8 @@ public class User {
         
         return check;
     }
-    public void register(){
+    public boolean register(){
+        boolean check = true;
         try{
             DBConnection dbconn=new DBConnection();
             Connection myconnection= dbconn.connection();
@@ -97,9 +99,18 @@ public class User {
                 myStatement.close();
                 myconnection.close();
             }
-            catch(SQLException ex) {Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);}
+            catch(SQLException ex) 
+            {
+                Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+                check = false;
+            }
         }
-        catch(SQLException ex) {Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);}  
+        catch(SQLException ex) 
+        {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+            check = false;
+        }  
+        return check;
         
     }
     

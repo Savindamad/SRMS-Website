@@ -1,8 +1,3 @@
-<%-- 
-    Document   : signup
-    Created on : Sep 8, 2016, 5:39:29 PM
-    Author     : Savinda Keshan
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -94,7 +89,7 @@
 
     </head>
     <body>
-        <form action="register" method="post">
+        <form action="Register" method="post">
             <table>
                 <tr>
                     <td colspan="2"><img class="img" src="img/login.png"</td>
