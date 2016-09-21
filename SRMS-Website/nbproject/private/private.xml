@@ -3,12 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/G:/Project/SRMS-Website/SRMS-Website/web/nav/reviews.html</file>
-            <file>file:/G:/Project/SRMS-Website/SRMS-Website/web/nav/res.html</file>
-            <file>file:/G:/Project/SRMS-Website/SRMS-Website/web/nav/menu.html</file>
-            <file>file:/G:/Project/SRMS-Website/SRMS-Website/web/nav/promot.html</file>
-            <file>file:/G:/Project/SRMS-Website/SRMS-Website/web/index.jsp</file>
-            <file>file:/G:/Project/SRMS-Website/SRMS-Website/web/css/stylesheet.css</file>
+            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/src/java/Register.java</file>
+            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/src/java/Login.java</file>
+            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/src/java/DB/DBConnection.java</file>
+            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/src/java/Beans/User.java</file>
         </group>
     </open-files>
 </project-private>

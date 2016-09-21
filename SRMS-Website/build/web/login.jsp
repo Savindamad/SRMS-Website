@@ -48,22 +48,21 @@
                 background-color: #008fbf;
                 margin-left: 7px
             }
-
-
-
         </style>
+        
     </head>
     <body>
-        <form class="form" name="login" onSubmit="return validateForm();" action="Login" method="post">
+        <script src="js/validate.js"></script>
+        <form class="form" name="login" onSubmit="return validateLoginForm();" action="Login" method="post">
             <table class="table">
                 <tr>
                     <td colspan="2"><img ${pageContext.request.contextPath} class="img" src="img/login.png"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="text" name="email" placeholder="username"></td>
+                    <td colspan="2"><input type="text" name="email" id="email" onblur='validateEmail()' placeholder="username" required="required"></td>
                 </tr> 
                 <tr>
-                    <td><input type="password" name="password" placeholder="password"></td>
+                    <td><input type="password" name="password" id="password" placeholder="password" required="required"></td>
                 </tr>
                 <tr><td colspan="2" align=center>
                         <input class="button" type="submit" value="Login"/></td></tr>
@@ -71,26 +70,5 @@
                         <a href="signup.jsp">Signup Here</a></td></tr>
             </table>
         </form>
-
-        <script>
-            function validateForm() {
-                var un = document.loginform.usr.value;
-                var pw = document.loginform.pword.value;
-                var username = "username";
-                var password = "password";
-                if ((un == username) && (pw == password)) {
-                    return true;
-                } else {
-                    alert("please check your username and password");
-                    return false;
-                }
-            }
-        </script>
-
-
-
     </body>
-
-
-
 </html>

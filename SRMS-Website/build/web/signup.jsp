@@ -81,36 +81,33 @@
                 margin-left: 50px;
                 
             }
-
-
-
-
         </style>
-
+        
     </head>
     <body>
-        <form action="Register" method="post">
+        <script src="js/validate.js"></script>
+        <form action="Register" method="post" onsubmit="return validateSignupForm();">
             <table>
                 <tr>
                     <td colspan="2"><img class="img" src="img/login.png"</td>
                 </tr>
                 <tr>
-                    <td colspan="2"> <input type="text" name="name" placeholder="Name" required="required"></td>
+                    <td colspan="2"> <input type="text" name="name" id="name" placeholder="Name" required="required"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"> <input type="text" name="email"placeholder="E-mail" required="required"></td>
+                    <td colspan="2"> <input type="text" name="email" id="email" placeholder="E-mail" required="required" onblur='validateEmail()'></td>
                 </tr>             
                 <tr>
-                    <td colspan="2"><label class="l1">Date of Birth</label> <input class="dob" type="date"  name="birthday" required="required"></td>
+                    <td colspan="2"><label class="l1">Date of Birth</label> <input class="dob" type="date"  name="birthday" id="birthday" required="required" onblur='validateDate()'></td>
                 </tr>              
                 <tr>
-                    <td colspan="2"> <input type="text" name="contact_no" placeholder="Mobile Number" required="required"></td>
+                    <td colspan="2"> <input type="text" name="contact_no" id="contact_no" placeholder="Mobile Number" required="required" onblur='validateContactNo()'></td>
                 </tr>              
                 <tr>
-                    <td colspan="2"> <input type="password" name="password" placeholder="Password" required="required"></td>
+                    <td colspan="2"> <input type="password" name="password" id="password" placeholder="Password" required="required" onblur='validatePassword()'></td>
                 </tr>
                 <tr>
-                    <td colspan="2"> <input type="password" name="rePassword" placeholder="Retype your Password" required="required"></td>
+                    <td colspan="2"> <input type="password" name="rePassword" id="repassword" placeholder="Retype your Password" required="required" onblur='validateRePassword()'></td>
                 </tr>
                 
                 <tr>

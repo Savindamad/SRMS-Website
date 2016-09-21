@@ -1,10 +1,5 @@
-<%-- 
-    Document   : index
-    Created on : Sep 7, 2016, 3:12:19 PM
-    Author     : Savinda Keshan
---%>
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="Beans.User"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,6 +14,16 @@
         <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
     </head>
     <body>
+        <%  
+            HttpSession sessionUser=request.getSession(false);  
+            String email=(String)sessionUser.getAttribute("email");
+            
+            User user1 = new User();
+            user1.setEmail(email);
+            user1.getUser();
+            
+            String name = user1.getName();
+        %>
         <div>
             <div class="navbar">
               <a href="index.html"><img class="logo" src="img/logo1.png" width="20%" ></a> 

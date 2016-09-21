@@ -1,15 +1,19 @@
+package Servletes;
+
 import Beans.User;
+import com.sun.prism.Texture;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpSession;
+import org.hibernate.validator.constraints.Email;
 
-public class Register extends HttpServlet {
+
+public class Login extends HttpServlet {
 
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -17,25 +21,31 @@ public class Register extends HttpServlet {
         PrintWriter out = response.getWriter();
         try{
             User user = new User();
-            
-            user.setName(request.getParameter("name"));
             user.setEmail(request.getParameter("email"));
             user.setPassword(request.getParameter("password"));
-            Date birthday = new Date(1993,12,19);
-            user.setBirthday(birthday);
-            user.setContact_no(request.getParameter("contact_no"));
             
-            if(user.register()){
-                RequestDispatcher rd = request.getRequestDispatcher("login.jsp");
-                rd.forward(request,response);
+            if(User.loginUser(request.getParameter("email"),request.getParameter("password"))){
+                User user1 = new User();
+                user1.setEmail(request.getParameter("email"));
+                
+                user1.getUser();
+                
+                HttpSession sessionUser = request.getSession();
+                sessionUser.setAttribute("email",user1.getEmail());
+                
+                
+                RequestDispatcher rd1 = request.getRequestDispatcher("index.jsp");
+                rd1.forward(request,response);
+                
             }
             else{
                 out.println("Either username or password is incorrect!"+user.getEmail()+"  "+user.getPassword());
                 out.println("<a href=\"login.jsp\">Try again...</a>");
             }
-            
         }
-        finally {out.close();}
+        finally{
+            out.close();
+        }
     }
 
     @Override
@@ -47,12 +57,11 @@ public class Register extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+            processRequest(request, response);
     }
 
     @Override
     public String getServletInfo() {
         return "Short description";
     }
-
 }
