@@ -21,23 +21,38 @@
             User user1 = new User();
             user1.setEmail(email);
             user1.getUser();
-            
+            String log;
+            String logLink;
             String name = user1.getName();
+            if(name==""){
+                log = "login";
+                logLink ="login.jsp";
+            }
+            else{
+                log = "logout";
+                logLink = "logout.jsp";
+            }
+            
+            pageContext.setAttribute("log", log);
+            pageContext.setAttribute("logLink", logLink);
+            
         %>
+        <c:out value="log"/>
+        <c:out value="logLink"/>
         <div>
             <div class="navbar">
-              <a href="index.html"><img class="logo" src="img/logo1.png" width="20%" ></a> 
-                 <div class="nav"> 
-                     <ul>
-                      <li><a href="nav/menu.html">Menu</a> </li>
-                      <li><a href="nav/res.html">Reservation</a> </li>
-                      <li><a href="nav/reviews.html">Reviews</a> </li>
-                      <li><a href="nav/promot.html">Promotion</a> </li>
-                      <li><a class="login" href="login.jsp">Login</a></li>      
+                <a href="index.html"><img class="logo" src="img/logo1.png" width="20%" ></a> 
+                <div class="nav"> 
+                    <ul>
+                        <li><a href="nav/menu.jsp">Menu</a> </li>
+                        <li><a href="nav/res.jsp">Reservation</a> </li>
+                        <li><a href="nav/reviews.jsp">Reviews</a> </li>
+                        <li><a href="nav/promot.jsp">Promotion</a> </li>
+                        <li><a href="${logLink}">${log}</a> </li>      
                     </ul>
                 </div>
-              </div>
-          </div>
+            </div>
+        </div>
         <!--Home section-->
     <section id="home">
         <div class="home-content">
