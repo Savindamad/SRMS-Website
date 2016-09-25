@@ -19,10 +19,11 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        try{
+        try{            
             User user = new User();
             user.setEmail(request.getParameter("email"));
             user.setPassword(request.getParameter("password"));
+            String page = request.getParameter("page");
             
             if(User.loginUser(request.getParameter("email"),request.getParameter("password"))){
                 User user1 = new User();
@@ -33,14 +34,14 @@ public class Login extends HttpServlet {
                 HttpSession sessionUser = request.getSession();
                 sessionUser.setAttribute("email",user1.getEmail());
                 
-                
-                RequestDispatcher rd1 = request.getRequestDispatcher("index.jsp");
-                rd1.forward(request,response);
+                request.setAttribute("login", "success");
+                //RequestDispatcher rd1 = request.getRequestDispatcher(page);
+                response.sendRedirect(page);
                 
             }
             else{
-                out.println("Either username or password is incorrect!"+user.getEmail()+"  "+user.getPassword());
-                out.println("<a href=\"login.jsp\">Try again...</a>");
+                request.setAttribute("login", "fail");
+                response.sendRedirect("login.jsp?login=fail");
             }
         }
         finally{

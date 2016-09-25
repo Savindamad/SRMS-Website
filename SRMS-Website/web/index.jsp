@@ -26,11 +26,11 @@
             String name = user1.getName();
             if(name==""){
                 log = "login";
-                logLink ="login.jsp";
+                logLink ="login.jsp?login=index.jsp";
             }
             else{
                 log = "logout";
-                logLink = "logout.jsp";
+                logLink = "logout.jsp?page=index.jsp";
             }
             
             pageContext.setAttribute("log", log);

@@ -5,6 +5,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
-        <% session.invalidate(); %>
+        
+        <% 
+            session.setAttribute("email", null);
+            session.invalidate();
+            response.sendRedirect(request.getParameter("page"));
+        %>
     </body>
 </html>

@@ -52,8 +52,21 @@
         
     </head>
     <body>
+        <%
+            String loginStatus = (String)request.getParameter("login");
+            String returnPage = "index.jsp";
+            String display = "";
+            if(loginStatus.equals("fail")){
+                display = "login fail..";
+            }
+            else{
+                returnPage = loginStatus;
+                display = "discription..";
+            }
+        %>
         <script src="js/validate.js"></script>
         <form class="form" name="login" onSubmit="return validateLoginForm();" action="Login" method="post">
+            <input type="hidden" name="page" value="<%=returnPage%>">
             <table class="table">
                 <tr>
                     <td colspan="2"><img ${pageContext.request.contextPath} class="img" src="img/login.png"></td>
