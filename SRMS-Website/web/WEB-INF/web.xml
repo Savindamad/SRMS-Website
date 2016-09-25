@@ -17,6 +17,14 @@
         <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    <servlet>
+        <servlet-name>Reservation</servlet-name>
+        <servlet-class>Servletes.Reservation</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ReDirectPage</servlet-name>
+        <servlet-class>Servletes.ReDirectPage</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -28,6 +36,14 @@
     <servlet-mapping>
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Reservation</servlet-name>
+        <url-pattern>/Reservation</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ReDirectPage</servlet-name>
+        <url-pattern>/ReDirectPage</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

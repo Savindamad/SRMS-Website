@@ -48,6 +48,10 @@ function validateSignupForm(){
         }
     }
 }
+
+function validateReservationForm(){
+    
+}
             
 function validateEmail(){
     var x = document.getElementById("email").value;
