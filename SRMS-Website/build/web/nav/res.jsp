@@ -85,7 +85,7 @@
                     <input class="l1" type="number" name="num_of_persons" placeholder="No of Persons"  min="1" max="20" required="Select number of persons">
                     <br>
                     <br>
-                    <input class="l1 l3" type="submit" value="Proceed the Reservation">
+                    <input class="l1 l3" type="submit" value="Check">
                 </form>
             </div>
             <div class="main">

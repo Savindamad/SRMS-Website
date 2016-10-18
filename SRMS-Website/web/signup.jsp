@@ -86,7 +86,7 @@
     </head>
     <body>
         <script src="js/validate.js"></script>
-        <form action="Register" method="post" onsubmit="return validateSignupForm();">
+        <form action="Register" method="post" onsubmit="return validateSignupForm();" name="signUp">
             <table>
                 <tr>
                     <td colspan="2"><img class="img" src="img/login.png"</td>

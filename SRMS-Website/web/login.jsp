@@ -58,6 +58,7 @@
             String display = "";
             if(loginStatus.equals("fail")){
                 display = "login fail..";
+                
             }
             else{
                 returnPage = loginStatus;
@@ -72,7 +73,7 @@
                     <td colspan="2"><img ${pageContext.request.contextPath} class="img" src="img/login.png"></td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="text" name="email" id="email" onblur='validateEmail()' placeholder="username" required="required"></td>
+                    <td colspan="2"><input type="text" name="email" id="email" onblur='validateEmail()' placeholder="username" required="required"><span id="val_email"></span></td>
                 </tr> 
                 <tr>
                     <td><input type="password" name="password" id="password" placeholder="password" required="required"></td>

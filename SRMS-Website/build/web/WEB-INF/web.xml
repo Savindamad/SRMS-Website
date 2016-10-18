@@ -25,6 +25,10 @@
         <servlet-name>ReDirectPage</servlet-name>
         <servlet-class>Servletes.ReDirectPage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CheckEmail</servlet-name>
+        <servlet-class>Servletes.CheckEmail</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -44,6 +48,10 @@
     <servlet-mapping>
         <servlet-name>ReDirectPage</servlet-name>
         <url-pattern>/ReDirectPage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CheckEmail</servlet-name>
+        <url-pattern>/CheckEmail</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

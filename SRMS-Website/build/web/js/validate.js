@@ -52,7 +52,6 @@ function validateSignupForm(){
 function validateReservationForm(){
     
 }
-            
 function validateEmail(){
     var x = document.getElementById("email").value;
     var atpos = x.indexOf("@");
@@ -62,6 +61,37 @@ function validateEmail(){
     }
     else{
         document.getElementById('email').style.borderColor = "green";
+    }
+}
+
+function validateEmail1() {
+    var x = document.getElementById("email").value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+        document.getElementById('email').style.borderColor = "red";
+    } 
+    else {        
+        var xmlhttp = new XMLHttpRequest();
+        var email = document.forms["signUp"]["email"].value;
+        var url = "checkMail.jsp?email=" + email;
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                if (xmlhttp.responseText == "\n\n\n\n\nUser already exists"){
+                    
+                }
+                else{
+                    
+                }
+            }
+
+        };
+        try {
+            xmlhttp.open("GET", url, true);
+            xmlhttp.send();
+        } catch (e) {
+            alert("unable to connect to server");
+        }
     }
 }
 
