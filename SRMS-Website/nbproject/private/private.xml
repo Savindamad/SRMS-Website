@@ -3,16 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/src/java/Servletes/Reservation.java</file>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/web/logout.jsp</file>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/src/java/Servletes/Login.java</file>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/web/nav/res.jsp</file>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/web/js/validate.js</file>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/src/java/DB/DBConnection.java</file>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/web/nav/menu.jsp</file>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/web/login.jsp</file>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/web/index.jsp</file>
-            <file>file:/D:/GROUP_PROJECT_IMPLEMENTATION/webSite/SRMS-Website/SRMS-Website/src/java/Beans/User.java</file>
+            <file>file:/home/savinda/Public/GroupProject/SRMS-Website/SRMS-Website/web/index.jsp</file>
+            <file>file:/home/savinda/Public/GroupProject/SRMS-Website/SRMS-Website/web/login.jsp</file>
+            <file>file:/home/savinda/Public/GroupProject/SRMS-Website/SRMS-Website/web/nav/reviews.jsp</file>
+            <file>file:/home/savinda/Public/GroupProject/SRMS-Website/SRMS-Website/src/java/Servletes/Login.java</file>
+            <file>file:/home/savinda/Public/GroupProject/SRMS-Website/SRMS-Website/web/nav/promotion.jsp</file>
+            <file>file:/home/savinda/Public/GroupProject/SRMS-Website/SRMS-Website/web/nav/reservation.jsp</file>
         </group>
     </open-files>
 </project-private>

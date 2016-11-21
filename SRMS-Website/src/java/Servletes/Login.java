@@ -1,7 +1,6 @@
 package Servletes;
 
 import Beans.User;
-import com.sun.prism.Texture;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -24,7 +23,7 @@ public class Login extends HttpServlet {
             user.setEmail(request.getParameter("email"));
             user.setPassword(request.getParameter("password"));
             String page = request.getParameter("page");
-            
+
             if(User.loginUser(request.getParameter("email"),request.getParameter("password"))){
                 User user1 = new User();
                 user1.setEmail(request.getParameter("email"));
@@ -36,7 +35,7 @@ public class Login extends HttpServlet {
                 
                 request.setAttribute("login", "success");
                 //RequestDispatcher rd1 = request.getRequestDispatcher(page);
-                response.sendRedirect(page);
+                response.sendRedirect("/SRMS-Website/"+page);
                 
             }
             else{

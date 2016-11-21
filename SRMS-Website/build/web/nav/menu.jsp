@@ -1,17 +1,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Beans.User"%>
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> Maharajah palace </title>
-        <link rel="stylesheet" href="../css/stylesheet.css" type="text/css">
-        <script src="../js/slides.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-
-    </head>
-<body>
-    <body>
-        <%  
+<head>
+  <title>Menu</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link href="../css/style.css" rel="stylesheet" type="text/css"  media="all" />
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+ </head>
+  <body>
+      <%  
             HttpSession sessionUser=request.getSession(false);  
             String email=(String)sessionUser.getAttribute("email");
             
@@ -34,63 +31,100 @@
             pageContext.setAttribute("logLink", logLink);
             
         %>
-        <c:out value="log"/>
-        <c:out value="logLink"/>
-        <div>
-            <div class="navbar">
-                <a href="../index.jsp"><img class="logo" src="../img/logo1.png" width="20%"></a> 
-                <div class="nav"> 
-                    <ul>
-                        <li><a href="menu.jsp">Menu</a> </li>
-                        <li><a href="res.jsp">Reservation</a> </li>
-                        <li><a href="reviews.jsp">Reviews</a> </li>
-                        <li><a href="promot.jsp">Promotion</a> </li>
-                        <li><a href="${logLink}">${log}</a> </li>      
-                    </ul>
+	<div class="header">
+	    <div class="wrap">
+		<div class="top-header">
+                    <div class="logo">
+			<a href="../index.jsp"><img src="../images/logo2.png" title="logo" /></a>
+                    </div>
+                    <div class="social-icons">
+			<ul>
+                            <li><a href="#"><img src="../images/facebook.png" title="facebook" /></a></li>
+                            <li><a href="#"><img src="../images/twitter.png" title="twitter" /></a></li>
+                            <li><a href="#"><img src="../images/google.png" title="google pluse" /></a></li>
+			</ul>
+                    </div>
+                    <div class="clear"> </div>
+		</div>
+		<div class="top-nav">
+                    <div class="top-nav-left">
+			<ul>
+                            <li><a href="../index.jsp">Home</a></li>
+                            <li class="active"><a href="menu.jsp">Menu</a></li>
+                            <li><a href="reservation.jsp">Reservation</a></li>
+                            <li><a href="promotion.jsp">Promotion</a></li>
+                            <li><a href="reviews.jsp">Reviews</a></li>
+                            <div class="clear"> </div>
+			</ul>
+                    </div>
+                    <div class="top-nav-right">
+                        <li><a href="${logLink}">${log}</a> </li>
+                    </div>
+                    <div class="clear"> </div>
+		</div>
+            </div>
+	</div>
+	<div class="content">
+            <div><img src="../images/menu.png"></div>
+		 	<!---start-about---->
+            <div class="about-us">
+            <div class="wrap">
+		<div class="about-header"></div>
+		<div class="about-info"></div>
+                <div class="specials">
+		<div class="specials-heading">
+                    <h3>Our Special</h3>
+                    <div class="clear"> </div>
+		</div>
+                <div class="clear"> </div>
+		<div class="specials-grids">
+		<div class="special-grid">
+                    <img src="../images/slider2.jpg" title="image-name">
+                    <a href="#">Lorem ipsum dolor</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+		</div>
+		<div class="special-grid">
+                    <img src="../images/slider1.jpg" title="image-name">
+                    <a href="#">volutpat luctus</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+		</div>
+		<div class="special-grid spe-grid">
+                    <img src="../images/slider4.jpg" title="image-name">
+                    <a href="#">Quisque erat metus</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+		</div>
+                <div class="special-grid">
+                    <img src="../images/slider1.jpg" title="image-name">
+                    <a href="#">volutpat luctus</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+		</div>
+                    <div class="special-grid">
+			<img src="../images/slider1.jpg" title="image-name">
+			<a href="#">volutpat luctus</a>
+			<p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+                    </div>
+                <div class="special-grid spe-grid">
+                    <img src="../images/slider4.jpg" title="image-name">
+                    <a href="#">Quisque erat metus</a>
+                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
+		</div>
+		<div class="clear"> </div>
                 </div>
+		<div class="clear"> </div>
+		</div>
+            </div>
+            <div class="testmonials">
+		<div class="wrap">
+                    <div class="testmonial-grid">
+			<h3>TESTIMONIALS :</h3>
+			<p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. In volutpat luctus eros ac placerat. Quisque erat metus, facilisis non felis eu, aliquam hendrrit quam. Donec ut lectus vel dolor adipiscing tincidunt. Ut auctor diam at est iaculis, vitae interdum magna sagittis."</p>
+                        <a href="#"> - Lorem ipsum</a>
+                    </div>
+		</div>
+            </div>
             </div>
         </div>
-    <section id="menu">
-                <div class="content">
-                    <p class="p1">Feel the real taste of Indian cuisine,<br>
-                    <ul class="menuli">
-                        <li>Soups</li>
-                        <li>Salads</li> 
-                        <li>Vegetarian meals</li>
-                        <li>Non-Vegetarian meals</li>
-                        <li>Rice Preparations</li> 
-                        <li>Desserts</li> 
-                        <li>with the impressive wine collection.</li>
-                        </ul>
-                    </div>
-        </section>
-                <section>
-                    <h3 class="title"> Menu </h3>
-                    <div class="slideshow-content">
-                        <div class="mySlides fade">
-                        <img src="../img/page1.png" width="100%" height="100%">
-                        </div>
-                        
-                        <div class="mySlides fade">
-                            <img src="../img/page2.png" width="100%" >
-                        </div>
-                        
-                        <div class="mySlides fade">
-                            <img src="../img/page2.png" width="100%" height="100%" >
-                        </div>
-                        
-                        <a class="prev" onclick="plusSlides(-1)"> &#10094; </a>
-                        <a class="nxt" onclick="plusSlides(1)">&#10095; </a>
-                    </div>
-                    <br>
-                    
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)">  </span>
-                            <span class="dot" onclick="currentSlide(2)">  </span>
-                            <span class="dot" onclick="currentSlide(3)">  </span>
-                        </div>
-                </section>
-    
     </body>
-
 </html>
+
+
