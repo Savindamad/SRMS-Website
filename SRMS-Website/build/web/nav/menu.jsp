@@ -1,5 +1,8 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Beans.User"%>
+<%@page import="Beans.Menu"%>
+<%@page import="Beans.MenuItem"%>
+<%@page import="java.util.ArrayList"%>
 <head>
   <title>Menu</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -29,6 +32,10 @@
             
             pageContext.setAttribute("log", log);
             pageContext.setAttribute("logLink", logLink);
+            
+            Menu menu = new Menu();
+            menu.setMenu();
+            ArrayList<MenuItem> menuArray = menu.getMenu();
             
         %>
 	<div class="header">
@@ -81,31 +88,6 @@
 		<div class="special-grid">
                     <img src="../images/slider2.jpg" title="image-name">
                     <a href="#">Lorem ipsum dolor</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-		</div>
-		<div class="special-grid">
-                    <img src="../images/slider1.jpg" title="image-name">
-                    <a href="#">volutpat luctus</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-		</div>
-		<div class="special-grid spe-grid">
-                    <img src="../images/slider4.jpg" title="image-name">
-                    <a href="#">Quisque erat metus</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-		</div>
-                <div class="special-grid">
-                    <img src="../images/slider1.jpg" title="image-name">
-                    <a href="#">volutpat luctus</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-		</div>
-                    <div class="special-grid">
-			<img src="../images/slider1.jpg" title="image-name">
-			<a href="#">volutpat luctus</a>
-			<p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
-                    </div>
-                <div class="special-grid spe-grid">
-                    <img src="../images/slider4.jpg" title="image-name">
-                    <a href="#">Quisque erat metus</a>
                     <p>Lorem ipsum dolor sit amet consectetur adiing elit. In volutpat luctus eros ac placerat. Quisque erat metus facilisis non feu,aliquam hendrerit quam. Donec ut lectus vel dolor adipiscing tincnt.</p>
 		</div>
 		<div class="clear"> </div>
