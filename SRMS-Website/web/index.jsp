@@ -114,19 +114,19 @@
             <div class="top-grids">
                 <div class="wrap">
                     <div class="top-grid">
-                        <a href="#"><img src="images/icon2.png" title="icon-name"></a>
+                        <a href="aboutus.html" target="iframe"><img src="images/icon2.png" title="icon-name"></a>
                         <h3>About us</h3>
                         <p> </p>
 
                     </div>
                     <div class="top-grid">
-                        <a href="#"><img src="images/icon2.png" title="icon-name"></a>
+                        <a href="contactus.html" target="iframe"><img src="images/icon2.png" title="icon-name"></a>
                         <h3>Contact us</h3>
                         <p>  </p>
 
                     </div>
                     <div class="top-grid last-topgrid">
-                        <a href="#"><img src="images/icon3.png" title="icon-name"></a>
+                        <a href="map.html" target="iframe"><img src="images/icon3.png" title="icon-name"></a>
                         <h3>Location</h3>
                         <p> </p>
 
@@ -135,13 +135,7 @@
                 </div>
             </div>
             <div class="mid-grid">
-                <div class="wrap">
-                    <h1>Welcome to Maharajapalace!</h1>
-                    <p>Maharaja Palace is one of the few fine dining Indian restaurants in Colombo. 
-                        The restaurant is designed in a way capturing the essence of the Indian culture.A dinner at the Maharaja Palace is not just about eating out. 
-                        It’s more like a journey through the culinary traditions of a great era. Visit us and feel the romance of Maharaja Palace.</p>
-                    <a class="button1" href="#">Read More</a>
-                </div>
+                <iframe name="iframe" class="wrap" src="aboutus.html"></iframe>
             </div>
             <div class="bottom-grids">
                 <div class="wrap">

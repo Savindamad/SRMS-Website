@@ -36,6 +36,11 @@
         .btn {
             margin-right: 30px;
         }
+        
+        .well {
+            width: 300px;
+            height: 300px;
+        }
     </style>
 <body>
     <%
@@ -136,6 +141,91 @@
                     %>
                 </div>
             </div>
+                <div class="container">
+	<div class="row">
+        <div class="col-md-6">
+    		<h2>Our Menu</h2>
+            <div id="custom-search-input">
+                <div class="input-group col-md-12">
+                    <input type="text" class="form-control input-lg" placeholder="Search food items" />
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+                  <div class="container">
+
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">OUR ITEMS</h1>
+            </div>
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <h1>header</h1>
+                 <p>description</p>
+                <a class="thumbnail" href="#">
+                    
+                <img class="img-responsive" src="http://placehold.it/400x300" alt=""></a>
+                </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <h1>header</h1>
+                    <p>description</p>
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <h1>header</h1>
+                    <p>description</p>
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <h1>header</h1>
+                    <p>description</p>
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <h1>header</h1>
+                    <p>description</p>
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <h1>header</h1>
+                    <p>description</p>
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <h1>header</h1>
+                    <p>description</p>
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                    <h1>header</h1>
+                    <p>description</p>
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
+                </a>
+            </div>  
+        </div>
+
+        <hr>
+    </div>
+</div>
             <div class="testmonials">
                 <div class="wrap">
                     <div class="testmonial-grid">

@@ -1,0 +1,99 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <style>
+body{
+background:#F1EDE4;
+font-family:Arial, Helvetica, sans-serif;
+}
+.wrap{
+width:80%;
+margin:0 auto;
+}
+.mid-grid h1{
+	font-size:2em;
+	font-family: 'Open Sans', sans-serif;
+	color:#363638;
+	text-transform:uppercase;
+}
+.mid-grid h2{
+	font-size:1em;
+	font-family: 'Open Sans', sans-serif;
+	color:#BD7F1C;
+	margin: 0.5em 0;
+}
+.mid-grid p{
+	font-size: 0.875em;
+	font-family: 'Open Sans', sans-serif;
+	color:#816943;
+	width: 73%;
+	margin: 0 auto;
+	line-height: 1.8em;
+	margin-bottom: 1em;
+}
+.mid-grid {
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	margin:0;
+	background:#EAE4D8;
+	padding: 3em 0;
+}
+
+.mid-grid.button{
+	display:block;
+}
+.button1{
+	color: #FFF;
+	font-size: 0.875em;
+	text-transform: uppercase;
+	padding:10px 15px;
+	border: 1px solid #EEE;
+	margin-top:10px;
+	display: inline-block;
+	background:#BD7F1C;
+	-webkit-transition: all 0.3s ease-out;
+	-moz-transition: all 0.3s ease-out;
+	-ms-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+}
+.button1:hover{
+	background:#363638;
+	color:#FFF;
+}
+.map{
+ margin-left: 200px;         
+      }      
+      
+</style>  
+</head>
+<body>
+<div class="mid-grid">
+<div class="wrap">
+    <h1>Location</h1>
+<p><div class="map" style="width:500px;height:250px" id="map"></div></iframe>
+ <script>
+function myMap() {
+var mymap= new google.maps.LatLng(6.905753, 79.860356);
+var mapCanvas = document.getElementById("map");
+var mapOptions = {
+center:mymap, zoom: 10
+};
+var map = new google.maps.Map(mapCanvas, mapOptions);
+var marker = google.maps.marker ({
+position :mymap,
+map:map,
+icon:'http://google-maps-icons.googlecode.com/files/train.png'
+});
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASH2I2BzZYqLRjwXoS5ixRWCNmbYnIYiQ &callback=myMap"></script>
+</div></p>
+<a class="button1" href="#">Read More</a>
+</div>
+</body>
+</html>

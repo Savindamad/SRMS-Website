@@ -38,7 +38,7 @@ margin:0 auto;
 .mid-grid {
 	text-align: center;
 	font-family: 'Open Sans', sans-serif;
-	margin: 4em 0 0em 0;
+	margin:0;
 	background:#EAE4D8;
 	padding: 3em 0;
 }
@@ -65,16 +65,34 @@ margin:0 auto;
 	background:#363638;
 	color:#FFF;
 }
+.map{
+ margin-left: 200px;         
+      }      
       
 </style>  
 </head>
 <body>
 <div class="mid-grid">
 <div class="wrap">
-    <h1>About us</h1>
-<p>Maharaja Palace is one of the few fine dining Indian restaurants in Colombo. 
- The restaurant is designed in a way capturing the essence of the Indian culture.A dinner at the Maharaja Palace is not just about eating out. 
- It’s more like a journey through the culinary traditions of a great era. Visit us and feel the romance of Maharaja Palace.</p>
+    <h1>Location</h1>
+<p><div class="map" style="width:500px;height:250px" id="map"></div></iframe>
+ <script>
+function myMap() {
+var mymap= new google.maps.LatLng(6.905753, 79.860356);
+var mapCanvas = document.getElementById("map");
+var mapOptions = {
+center:mymap, zoom: 10
+};
+var map = new google.maps.Map(mapCanvas, mapOptions);
+var marker = google.maps.marker ({
+position :mymap,
+map:map,
+icon:'http://google-maps-icons.googlecode.com/files/train.png'
+});
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASH2I2BzZYqLRjwXoS5ixRWCNmbYnIYiQ &callback=myMap"></script>
+</div></p>
 <a class="button1" href="#">Read More</a>
 </div>
 </body>
