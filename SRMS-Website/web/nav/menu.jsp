@@ -20,8 +20,6 @@
     <script>
         $(document).ready(function () {
             $('#searchBtn').click(function(event) {
-                var search = $('#search').val();
-                alert(search);
                 $.get('SearchMenu',
                         {search_name, search},
                         function (response) {
