@@ -3,12 +3,20 @@
 <html>
     <head>
         <title>reviews</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link href="../css/style.css" rel="stylesheet" type="text/css"  media="all" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
     <style>
+        .btn {
+            margin-right: 30px;
+        }
         .ifg {
             margin-top: 50px;
         }
@@ -62,8 +70,11 @@
                             <div class="clear"> </div>
                         </ul>
                     </div>
-                    <div class="top-nav-right">
-                        <li><a href="${logLink}">${log}</a> </li>      
+                   <div class="top-nav-right">
+                            <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>        
+                        <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
+                    </ul>
                     </div>
                     <div class="clear"> </div>
                 </div>
@@ -90,15 +101,6 @@
                         </div>				
                         <div class="col span_2_of_3">
                             <div class="contact-form">
-                                <div class="company_address">
-                                    <h3>Information :</h3>
-                                    <p>500 Lorem Ipsum Dolor Sit,</p>
-                                    <p>22-56-2-9 Sit Amet, Lorem,</p>
-                                    <p>USA</p>
-                                    <p>Phone:(00) 222 666 444</p>
-                                    <p>Fax: (000) 000 00 00 0</p>
-                                    <p>Email: <span><a href="#">info(at)mycompany.com</span></a></p>
-                                    <p>Follow on: <span><a href="#">Facebook</a></span>, <span><a href="#">Twitter</a></span></p>
                                 </div>
                             </div>
                         </div>				

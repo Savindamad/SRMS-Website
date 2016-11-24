@@ -5,6 +5,11 @@
 <%@page import="java.util.ArrayList"%>
 <head>
     <title>Menu</title>
+     <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="../css/style.css" rel="stylesheet" type="text/css"  media="all" />
@@ -27,6 +32,11 @@
 
     </script>
 </head>
+<style>
+        .btn {
+            margin-right: 30px;
+        }
+    </style>
 <body>
     <%
         HttpSession sessionUser = request.getSession(false);
@@ -84,8 +94,11 @@
                     </ul>
                 </div>
                 <div class="top-nav-right">
-                    <li><a href="${logLink}">${log}</a> </li>
-                </div>
+                            <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>        
+                        <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
+                    </ul>
+                    </div>
                 <div class="clear"> </div>
             </div>
         </div>
