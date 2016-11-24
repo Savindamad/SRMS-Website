@@ -49,18 +49,17 @@
                 margin-left: 7px
             }
         </style>
-        
+
     </head>
     <body>
         <%
-            String loginStatus = (String)request.getParameter("login");
+            String loginStatus = (String) request.getParameter("login");
             String returnPage = "index.jsp";
             String display = "";
-            if(loginStatus.equals("fail")){
+            if (loginStatus.equals("fail")) {
                 display = "login fail..";
-                
-            }
-            else{
+
+            } else {
                 returnPage = loginStatus;
                 display = "discription..";
             }

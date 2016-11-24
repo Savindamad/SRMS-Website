@@ -24,7 +24,7 @@
             }
 
             h3 {
-                
+
                 margin-top:5px;
                 font-size: 18px;
                 color:darkblue;
@@ -33,7 +33,7 @@
             tr {
                 padding: 10px;
                 width: 200px;
-                
+
             }
 
             td {
@@ -41,7 +41,7 @@
                 height: 5px;
                 color: white;
                 font-family: 'Acme', sans-serif;
-              
+
             }
             input{
                 width: 95%;
@@ -52,23 +52,23 @@
             }
 
             .td1{
-              background-color:gray; 
-                
-                
+                background-color:gray; 
+
+
             }
             .button{
-               margin-top: 5px;
-               width: 95%;
-               padding: 5px;
-               height: 36px;
-               margin-left: 7px;
-               margin-right: 7px;
-               
-               color: black;
-               font-family: 'Pontano Sans', sans-serif;
-               background-color: #008fbf;
+                margin-top: 5px;
+                width: 95%;
+                padding: 5px;
+                height: 36px;
+                margin-left: 7px;
+                margin-right: 7px;
+
+                color: black;
+                font-family: 'Pontano Sans', sans-serif;
+                background-color: #008fbf;
             }
-            
+
             .dob {
                 width: 53%;
                 margin-left: 40px;
@@ -76,13 +76,13 @@
             .l1 {
                 margin-left: 10px;
             }
-            
+
             .img {
                 margin-left: 50px;
-                
+
             }
         </style>
-        
+
     </head>
     <body>
         <script src="js/validate.js"></script>
@@ -109,7 +109,7 @@
                 <tr>
                     <td colspan="2"> <input type="password" name="rePassword" id="repassword" placeholder="Retype your Password" required="required" onblur='validateRePassword()'></td>
                 </tr>
-                
+
                 <tr>
                     <td colspan="2" align="center"> <input class="button" type="submit" value="Submit" ></td>
                 </tr>

@@ -18,4 +18,32 @@ public class MenuItem {
         this.itemSpiciness=itemSpiciness;
         this.itemImagePath=itemImagePath;
     }
+    public String getItemDescription(){
+        return itemDescription;
+    }
+
+    public String getItemId() {
+        return itemId;
+    }
+
+    public String getItemType() {
+        return itemType;
+    }
+
+    public String getItemName() {
+        return itemName;
+    }
+
+    public String getItemPrice() {
+        return itemPrice;
+    }
+
+    public String getItemSpiciness() {
+        return itemSpiciness;
+    }
+
+    public String getItemImagePath() {
+        return itemImagePath;
+    }
+    
 }

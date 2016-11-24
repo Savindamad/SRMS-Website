@@ -28,9 +28,9 @@ public class Menu {
               String itemType = rs.getString("item_type");
               String itemName = rs.getString("item_name");
               String itemDescription = rs.getString("description");
-              String itemPrice = rs.getString("	price");
+              String itemPrice = rs.getString("price");
               String itemSpiciness = rs.getString("spiciness");
-              String imagePath="";
+              String imagePath=rs.getString("image_path");
               
               MenuItem item = new MenuItem(itemId,itemType,itemName,itemDescription,itemPrice,itemSpiciness,imagePath);
               itemArray.add(item);
