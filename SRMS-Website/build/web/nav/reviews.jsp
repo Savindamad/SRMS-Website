@@ -8,6 +8,11 @@
         <link href="../css/style.css" rel="stylesheet" type="text/css"  media="all" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
+    <style>
+        .ifg {
+            margin-top: 50px;
+        }
+    </style>
     <body>
         <%
             HttpSession sessionUser = request.getSession(false);
@@ -69,37 +74,19 @@
             <div class="contact">
                 <div class="wrap">
                     <div class="section group">
+                        <div class="ifg">
                         <div>
                             <ul class="nav1">
-                                <li class="li1 active"><a class="a1" href="#" target="ihack">Articles</a></li>
-                                <li class="li1"><a class="a1" href="#" target="ihack">Reviews</a></li>
-                                <li class="li1"><a class="a1" href="#" target="ihack">Reviews of food items</a></li>
+                                <li class="li1 active"><a class="a1" href="../reviews/articles.html" target="ihack">Articles</a></li>
+                                <li class="li1"><a class="a1" href="../reviews/writer.html" target="ihack">Reviews</a></li>
                             </ul>
                         </div>
                         <div>
-                            <iframe name="ihack" width="100%" height="600px" style="border:1px solid black;"> </iframe>
+                            <iframe src="../reviews/articles.html" name="ihack" width="100%" height="600px" style="border:1px solid black;"> </iframe>
                         </div>
+                            </div>
                         <div class="col span_1_of_3">
-                            <div class="contact_info">
-                                <h3>Find Us Here</h3>
-                                <div class="map" style="width:350px;height:300px" id="map"></div>
-                                <script>
-                                    function myMap() {
-                                        var mymap = new google.maps.LatLng(6.905753, 79.860356);
-                                        var mapCanvas = document.getElementById("map");
-                                        var mapOptions = {
-                                            center: mymap, zoom: 10
-                                        };
-                                        var map = new google.maps.Map(mapCanvas, mapOptions);
-                                        var marker = google.maps.marker({
-                                            position: mymap,
-                                            map: map,
-                                            icon: 'http://google-maps-icons.googlecode.com/files/train.png'
-                                        });
-                                    }
-                                </script>
-                                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASH2I2BzZYqLRjwXoS5ixRWCNmbYnIYiQ &callback=myMap"></script>
-                            </div>	
+                            
                         </div>				
                         <div class="col span_2_of_3">
                             <div class="contact-form">
