@@ -26,7 +26,29 @@ public class SearchMenu extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String search = req.getParameter("search");
+        String search = req.getParameter("searchName");
+        Menu menu = new Menu();
+        menu.setMenu();
+        ArrayList<MenuItem> itemArray = menu.getMenu();
+       
+        ArrayList<MenuItem> tempArray = new ArrayList<>();
+        for(int i = 0; i<itemArray.size(); i++){
+            if(itemArray.get(i).getItemName().toLowerCase().contains(search)){
+                tempArray.add(itemArray.get(i));
+            }
+        }
+        resp.setContentType("text/plain");
+        resp.setCharacterEncoding("UTF-8");
+        String response = "";
+        for(int i = 0; i<tempArray.size(); i++){
+            response+="<div>"+tempArray.get(i).getItemName()+"</div>";
+        }
+        resp.getWriter().write(response);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+                String search = req.getParameter("searchName");
         Menu menu = new Menu();
         menu.setMenu();
         ArrayList<MenuItem> itemArray = menu.getMenu();
@@ -46,5 +68,5 @@ public class SearchMenu extends HttpServlet {
         resp.getWriter().write(response);
     }
     
-
+    
 }

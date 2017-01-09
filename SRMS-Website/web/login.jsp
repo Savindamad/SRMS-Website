@@ -77,10 +77,16 @@
                 <tr>
                     <td><input type="password" name="password" id="password" placeholder="password" required="required"></td>
                 </tr>
-                <tr><td colspan="2" align=center>
-                        <input class="button" type="submit" value="Login"/></td></tr>
-                <tr><td colspan="2" align=center>
-                        <a href="signup.jsp">Signup Here</a></td></tr>
+                <tr>
+                    <td colspan="2" align=center>
+                        <input class="button" type="submit" value="Login"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align=center>
+                        <a href="signup.jsp">Signup Here</a>
+                    </td>
+                </tr>
             </table>
         </form>
     </body>

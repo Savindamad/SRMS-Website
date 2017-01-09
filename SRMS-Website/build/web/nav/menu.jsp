@@ -5,11 +5,11 @@
 <%@page import="java.util.ArrayList"%>
 <head>
     <title>Menu</title>
-     <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="../css/style.css" rel="stylesheet" type="text/css"  media="all" />
@@ -19,27 +19,33 @@
     <script srs="http://code.jquery.com/jquery-latest.js"></script>
     <script>
         $(document).ready(function () {
-            $('#searchBtn').click(function(event) {
-                $.get('SearchMenu',
-                        {search_name, search},
-                        function (response) {
-                            $('#imagediv').text(response);
-                        });
+            $('#searchBtn').click(function (event) {
+                alert(test);
+                $.ajax({
+                    url: 'SearchMenu',
+                    type:'POST',
+                    data: {
+                        userName: $('#searchName').val()
+                    },
+                    success: function (responseText) {
+                        $('#imagediv').text(responseText);
+                    }
+                });
             });
         });
 
     </script>
 </head>
 <style>
-        .btn {
-            margin-right: 30px;
-        }
-        
-        .well {
-            width: 300px;
-            height: 300px;
-        }
-    </style>
+    .btn {
+        margin-right: 30px;
+    }
+
+    .well {
+        width: 300px;
+        height: 300px;
+    }
+</style>
 <body>
     <%
         HttpSession sessionUser = request.getSession(false);
@@ -97,11 +103,11 @@
                     </ul>
                 </div>
                 <div class="top-nav-right">
-                            <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>        
                         <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
                     </ul>
-                    </div>
+                </div>
                 <div class="clear"> </div>
             </div>
         </div>
@@ -115,115 +121,54 @@
                 <div class="about-header"></div>
                 <div class="about-info"></div>
                 <div class="specials">
-                    <div class="specials-heading">
-                        <h3>Our menu</h3>
-                        <div class="clear"> </div>
-                        <input type="text" name="search" id="search">
-                        <input type="button" id="searchBtn" name="searchBtn" value="Search" >
+                </div>
+
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                                <input id="searchName" type="text" class="form-control input-lg" placeholder="Search food items" />
+                                <span class="input-group-btn">
+                                    <div>
+                                        <input  id="searchBtn" class="btn btn-info btn-lg" value="Search" type="button">
+                                    </div>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div id='imagediv'>
-                    <%                    int x = menuArray.size();
-                        for (int i = 0; i < x; i++) {
-                            String itemDescription = menuArray.get(i).getItemDescription();
-                            String itemName = menuArray.get(i).getItemName();
-                            String imagePath = menuArray.get(i).getItemImagePath();
-
-                            out.write("<div class='specials-grids'>");
-                            out.write("<div class='special-grid'>");
-                            out.write("<img src='" + imagePath + "'>");
-                            out.write("<h3>" + itemName + "</h3>");
-                            out.write("</div>");
-                            out.write("</div>");
-                        }
-                    %>
-                </div>
-            </div>
                 <div class="container">
-	<div class="row">
-        <div class="col-md-6">
-    		<h2>Our Menu</h2>
-            <div id="custom-search-input">
-                <div class="input-group col-md-12">
-                    <input type="text" class="form-control input-lg" placeholder="Search food items" />
-                    <span class="input-group-btn">
-                        <button class="btn btn-info btn-lg" type="button">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </span>
+
+                    <div class="row">
+
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Our menu</h1>
+                        </div>
+
+                        <div id='imagediv'>
+                            <%                                int x = menuArray.size();
+                                for (int i = 0; i < x; i++) {
+                                    String itemDescription = menuArray.get(i).getItemDescription();
+                                    String itemName = menuArray.get(i).getItemName();
+                                    String imagePath = menuArray.get(i).getItemImagePath();
+
+                                    out.write("<div class='col-lg-3 col-md-4 col-xs-6 thumb'>");
+                                    out.write("<h1>" + itemName + "</h1>");
+                                    out.write("<p>description</p>");
+                                    out.write("<p>price</p>");
+                                    out.write("<a class='thumbnail' href='../images/slider1.jpg'>");
+                                    out.write("<img class='img-responsive' src='../images/slider1.jpg' alt=''></a>");
+                                    out.write("</div>");
+                                }
+                            %>
+                        </div>
+                    </div>
+
+                    <hr>
                 </div>
             </div>
-        </div>
-	</div>
-                  <div class="container">
-
-        <div class="row">
-
-            <div class="col-lg-12">
-                <h1 class="page-header">OUR ITEMS</h1>
-            </div>
-
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                <h1>header</h1>
-                 <p>description</p>
-                <a class="thumbnail" href="#">
-                    
-                <img class="img-responsive" src="http://placehold.it/400x300" alt=""></a>
-                </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <h1>header</h1>
-                    <p>description</p>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <h1>header</h1>
-                    <p>description</p>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <h1>header</h1>
-                    <p>description</p>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <h1>header</h1>
-                    <p>description</p>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <h1>header</h1>
-                    <p>description</p>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <h1>header</h1>
-                    <p>description</p>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-                    <h1>header</h1>
-                    <p>description</p>
-                <a class="thumbnail" href="#">
-                    <img class="img-responsive" src="http://placehold.it/400x300" alt="">
-                </a>
-            </div>  
-        </div>
-
-        <hr>
-    </div>
-</div>
             <div class="testmonials">
                 <div class="wrap">
                     <div class="testmonial-grid">

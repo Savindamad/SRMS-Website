@@ -11,18 +11,18 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        
+
         <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <link href="css/slider.css" rel="stylesheet" type="text/css"  media="all" />
         <link rel="stylesheet" type="text/css" href="css/lightbox.css" media="screen" />
-        
+
         <script type="text/javascript" src="js/map.js"></script> 
         <script type="text/javascript" src="js/jquery.min.js"></script> 
         <script type="text/javascript" src="js/jquery.easing.1.3.js"></script> 
         <script type="text/javascript" src="js/camera.min.js"></script>
         <script type="text/javascript" src="js/jquery.lightbox.js"></script>
-        
+
         <script type="text/javascript">
             $(function () {
                 $('.gallery a').lightBox();
@@ -51,13 +51,21 @@
             user1.getUser();
             String log;
             String logLink;
+            String sign = "Signup";
+            String signLink;
             String name = user1.getName();
             if (name == "") {
                 log = "login";
                 logLink = "login.jsp?login=index.jsp";
+                sign = "Signup";
+                signLink = "signup.jsp";
+
             } else {
                 log = "logout";
                 logLink = "logout.jsp?page=index.jsp";
+                //signup = user1.getName();
+                signLink = "#";
+                sign = "Savinda Keshan";
             }
 
             pageContext.setAttribute("log", log);
@@ -92,10 +100,10 @@
                         </ul>
                     </div>
                     <div class="top-nav-right">
-                            <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>        
-                        <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
-                    </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="${signupLink}"><span class="glyphicon glyphicon-user"></span>${sign}</a></li>        
+                            <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
+                        </ul>
                     </div>
                     <div class="clear"> </div>
                 </div>
@@ -103,10 +111,10 @@
         </div>
         <div class="slider">					     
             <div class="camera_wrap camera_azure_skin" id="camera_wrap_1">									           
-                <div data-src="images/slide1.jpg">  </div> 
-                <div data-src="images/slider2.jpg">  </div>
-                <div data-src="images/slider3.jpg">  </div>
-                <div data-src="images/slider4.jpg">  </div>
+                <div data-src="images/slide1.jpg"></div> 
+                <div data-src="images/slider2.jpg"></div>
+                <div data-src="images/slider3.jpg"></div>
+                <div data-src="images/slider4.jpg"></div>
             </div>
             <div class="clear"> </div>					       
         </div>					
@@ -162,8 +170,8 @@
         </div>
         <div class="copy-right">
             <div class="top-to-page">
-                <a href="#top" class="scroll"> </a>
-                <div class="clear"> </div>
+                <a href="#top" class="scroll"></a>
+                <div class="clear"></div>
             </div>	
         </div>
     </body>
