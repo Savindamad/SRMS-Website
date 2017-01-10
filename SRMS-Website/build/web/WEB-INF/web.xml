@@ -33,6 +33,10 @@
         <servlet-name>SearchMenu</servlet-name>
         <servlet-class>Servletes.SearchMenu</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AdminLogin</servlet-name>
+        <servlet-class>Servletes.AdminLogin</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -60,6 +64,10 @@
     <servlet-mapping>
         <servlet-name>SearchMenu</servlet-name>
         <url-pattern>/SearchMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminLogin</servlet-name>
+        <url-pattern>/AdminLogin</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
