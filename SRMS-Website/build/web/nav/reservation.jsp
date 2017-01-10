@@ -213,38 +213,28 @@ fieldset {
                         <div class="container">  
   <form id="contact" action="" method="post">
     <h3>Reservation</h3>
-<!--    <h4>Contact us for custom quote</h4>-->
-    <fieldset>
-      <input placeholder="Your name" type="text" tabindex="1" required autofocus>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Email Address" type="email" tabindex="2" required>
-    </fieldset>
-    <fieldset>
-      <input placeholder="Your Phone Number (optional)" type="tel" tabindex="3" required>
-    </fieldset>
      <fieldset>
-      <input  placeholder="Time" type="url" tabindex="4" required>
-    </fieldset>
-    <fieldset>
-<!--      <input  placeholder="Table type" type="url" tabindex="4" required>-->
-    <Select class="input1"  placeholder="Table Type" required="Select table type">
+       <Select class="input1"  name="Table type" placeholder="Table Type" required="Select table type">
+            <option>Table Type</option>
             <option value="tres">Table reservation</option>
             <option value="tres">Private Dining</option>
-    </Select>
+       </select>
+    </fieldset>
+    <fieldset>
+        <Select class="input1"  placeholder="Time" required="Select table type">
+            <option>Time</option>
+            <option value="t1">Lunch</option>
+            <option value="t2">Dinner</option>
+        </select>
     </fieldset>
     <fieldset>
         <input style="width:100%;" type="date" placeholder="Date" type="url" tabindex="4" required>
     </fieldset>
     <fieldset>
         <input style="width:100%; " type="number" placeholder="No of Persons"  type="url" tabindex="4" required>
-    </fieldset>
+    </fieldset> 
     <fieldset>
-      <textarea placeholder="Type your message here...." tabindex="5" required></textarea>
-    </fieldset>
-    
-    <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Check Availability</button>
     </fieldset>
   </form>
 </div>

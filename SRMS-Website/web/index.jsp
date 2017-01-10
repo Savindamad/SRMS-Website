@@ -155,7 +155,6 @@
             <div class="wrap">
                 <div class="footer-grid">
                     <h3></h3>
-                    <a href="#"></a>
                 </div>
                 <div class="footer-grid center-grid">
                     <h3></h3>
