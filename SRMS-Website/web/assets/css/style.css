@@ -41,7 +41,7 @@ body {
     padding-bottom: 20px;
     border-bottom: 2px solid #F0677C;
     text-transform: uppercase;
-    color: #F0677C;
+    color: #0E83A3;
     font-size: 20px;
     margin-bottom: 40px;
 }
@@ -155,7 +155,7 @@ header {
 /* MENU LINKS SECTION*/
 
 .menu-section {
-    background-color: #3D3D3D;
+    background-color: #0e83a3;
 }
 
 #menu-top a {
@@ -167,7 +167,7 @@ header {
 }
 
 .menu-top-active {
-    background-color: #C36464;
+    background-color: #b3b6b7;
 }
 
 .menu-section .nav > li > a:hover,.menu-section .nav > li > a:focus {
