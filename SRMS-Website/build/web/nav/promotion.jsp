@@ -1,9 +1,12 @@
+<%@page import="Beans.PromotionDetails"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Beans.Promotion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="Beans.User"%>
 <html>
     <head>
         <title>promotion</title>
-         <meta charset="utf-8">
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -40,6 +43,10 @@
             pageContext.setAttribute("log", log);
             pageContext.setAttribute("logLink", logLink);
 
+            Promotion promotions = new Promotion();
+            ArrayList<PromotionDetails> proDetails = new ArrayList<PromotionDetails>();
+            proDetails = promotions.getPromotions();
+
         %>
         <!----start-header----->
         <div class="header">
@@ -68,11 +75,11 @@
                             <div class="clear"> </div>
                         </ul>
                     </div>
-                   <div class="top-nav-right">
-                            <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>        
-                        <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
-                    </ul>
+                    <div class="top-nav-right">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>        
+                            <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
+                        </ul>
                     </div>
                     <div class="clear"> </div>
                 </div>
@@ -81,29 +88,34 @@
         </div>
         <div class="content">
             <div><img src="../images/promosion.png"></div>
-            <div class="gallerys">
-                <div class="wrap">
-                    <h3>Promotions</h3>
-                    <div class="gallery-grids">
-
-                        <div class="gallery-grid">
-                            <a href="#"><img src="../images/prom1.jpg" alt=""><span>Curries & Mains</span></a>
-                            <h4>GARLIC CHICKEN</h4>
-                            <p>Price: Rs.850
-                                <br>
-                                Offer: 25% Discount
-                                <br>
-                                Availability: Both Lunch and Dinner
-                                <br>
-                                Description: Chunks of boneless chicken cooked with Chef's blend of special spices and served in a garlic gravy</p>
-                        </div>
-                        <div class="clear"> </div>
-
-                    </div>
-                </div>					
+            <div class="gallerys">				
             </div>
         </div>
-
+        <div class="container-fluid" style="margin-top:40px">
+            <div class="row">
+                <div class="col-md-12">
+                    <%
+                        for(int i = 0; i<proDetails.size(); i++){
+                            PromotionDetails temp = proDetails.get(i);
+                    %>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="thumbnail">
+                                <img alt="Bootstrap Thumbnail First" src="<% out.print(temp.getImagePath()); %>" />
+                                <div class="caption">
+                                    <h3><% out.print(temp.getTitle()); %></h3>
+                                    <p><% out.print(temp.getDescription()); %></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <%
+                        }
+                    %>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 
