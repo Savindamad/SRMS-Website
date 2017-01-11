@@ -23,7 +23,7 @@
                 alert(test);
                 $.ajax({
                     url: 'SearchMenu',
-                    type:'POST',
+                    type: 'POST',
                     data: {
                         userName: $('#searchName').val()
                     },
@@ -148,22 +148,49 @@
                         </div>
 
                         <div id='imagediv'>
-                            <%                                int x = menuArray.size();
-                                for (int i = 0; i < x; i++) {
-                                    String itemDescription = menuArray.get(i).getItemDescription();
-                                    String itemName = menuArray.get(i).getItemName();
-                                    String imagePath = menuArray.get(i).getItemImagePath();
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
 
-                                    out.write("<div class='col-lg-3 col-md-4 col-xs-6 thumb'>");
-                                    out.write("<h1>" + itemName + "</h1>");
-                                    out.write("<p>description</p>");
-                                    out.write("<p>price</p>");
-                                    out.write("<a class='thumbnail' href='../images/slider1.jpg'>");
-                                    out.write("<img class='img-responsive' src='../images/slider1.jpg' alt=''></a>");
-                                    out.write("</div>");
-                                }
-                            %>
+                                        <%                                int x = menuArray.size();
+                                            for (int i = 0; i < x; i++) {
+                                                String itemDescription = menuArray.get(i).getItemDescription();
+                                                String itemName = menuArray.get(i).getItemName();
+                                                String imagePath = menuArray.get(i).getItemImagePath();
+                                                String itemPrice = menuArray.get(i).getItemPrice();
+                                                String itemType = menuArray.get(i).getItemType();
+                                        %>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+
+                                                <div class="col-md-3">
+                                                    <div class="thumbnail">
+                                                        <img alt="Bootstrap Thumbnail First" src="<% out.print(imagePath); %>" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7">
+                                                    <div class="thumbnail">
+                                                        <div class="caption">
+                                                            <h3>Name : <% out.print(itemName); %></h3>
+                                                            <p>Price : <% out.print(itemPrice); %></p>
+                                                            <p>category : <% out.print(itemType); %></p>
+                                                            <p>Description : <% out.print(itemDescription); %></p>
+                                                        </div>
+                                                    </div>
+                                                </div>                                                    
+
+                                            </div>
+                                        </div>
+                                        <%
+                                            }
+                                        %>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+
                     </div>
 
                     <hr>

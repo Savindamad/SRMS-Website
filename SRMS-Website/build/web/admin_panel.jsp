@@ -19,6 +19,18 @@
         <link href="assets/css/style.css" rel="stylesheet" />
     </head>
     <body>
+        <%
+        HttpSession sessionUser = request.getSession(false);
+        String name = (String) sessionUser.getAttribute("name");
+
+        if (name == null) {
+            request.setAttribute("login", "fail");
+            response.sendRedirect("admin_login.jsp?login=fail");
+        } else {
+
+        }
+
+    %>
         <div class="navbar navbar-inverse set-radius-zero" style="height: 120px;">
             <div class="container">
                 <div class="navbar-header">
@@ -40,7 +52,7 @@
 
                 </div>
                 <div class="row">
-                    <a href="#">
+                    <a href="admin_nav/acceptReview.jsp">
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="dashboard-div-wrapper bk-clr-four" style="background-color: #4e91fd">
                                 <i  class="fa fa-venus dashboard-div-icon" ></i>

@@ -19,7 +19,7 @@
                         <h1>Smart RMS</h1>
                     </div>
 
-                    <div class="login-form">
+                    <form class="login-form" action="AdminLogin" method="POST">
                         <div class="control-group">
                             <input type="text" class="login-field" name="username" value="" placeholder="username" id="login-name">
                             <label class="login-field-icon fui-user" for="login-name"></label>
@@ -30,9 +30,9 @@
                             <label class="login-field-icon fui-lock" for="login-pass"></label>
                         </div>
 
-                        <a class="btn btn-primary btn-large btn-block" href="">login</a>
+                        <input class="btn btn-primary btn-large btn-block" type="submit" value="Login">
                         <p></p>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
