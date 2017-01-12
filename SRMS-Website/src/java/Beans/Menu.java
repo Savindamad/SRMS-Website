@@ -46,4 +46,18 @@ public class Menu {
     public ArrayList<MenuItem> getMenu(){
         return itemArray;
     }
+    public ArrayList<MenuItem> searchMenu(String search){
+        ArrayList<MenuItem> tempArray = new ArrayList<MenuItem>();
+        setMenu();
+        for(int i = 0; i<itemArray.size(); i++){
+            MenuItem temp = itemArray.get(i);
+            if(temp.getItemName().toLowerCase().contains(search.toLowerCase())){
+                tempArray.add(temp);
+            }
+            else if(temp.getItemType().toLowerCase().contains(search.toLowerCase())){
+                tempArray.add(temp);
+            }
+        }
+        return tempArray;
+    }
 }

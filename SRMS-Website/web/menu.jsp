@@ -18,22 +18,6 @@
     <script type="text/javascript" src="js/search.js"></script>
     <script srs="http://code.jquery.com/jquery-latest.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#searchBtn').click(function (event) {
-                alert(test);
-                $.ajax({
-                    url: 'SearchMenu',
-                    type: 'POST',
-                    data: {
-                        userName: $('#searchName').val()
-                    },
-                    success: function (responseText) {
-                        $('#imagediv').text(responseText);
-                    }
-                });
-            });
-        });
-
     </script>
 </head>
 <style>
@@ -47,6 +31,8 @@
     }
 </style>
 <body>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/searchMenu.js" type="text/javascript"></script>
     <%
         HttpSession sessionUser = request.getSession(false);
         String email = (String) sessionUser.getAttribute("email");
@@ -147,45 +133,42 @@
                             <h1 class="page-header">Our menu</h1>
                         </div>
 
-                        <div id='imagediv'>
+                        <div>
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-12">
-
-                                        <%                                int x = menuArray.size();
-                                            for (int i = 0; i < x; i++) {
-                                                String itemDescription = menuArray.get(i).getItemDescription();
-                                                String itemName = menuArray.get(i).getItemName();
-                                                String imagePath = menuArray.get(i).getItemImagePath();
-                                                String itemPrice = menuArray.get(i).getItemPrice();
-                                                String itemType = menuArray.get(i).getItemType();
-                                        %>
-
-                                        <div class="row">
-                                            <div class="col-md-12">
-
-                                                <div class="col-md-3">
-                                                    <div class="thumbnail">
-                                                        <img alt="Bootstrap Thumbnail First" src="<% out.print(imagePath); %>" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-7">
-                                                    <div class="thumbnail">
-                                                        <div class="caption">
-                                                            <h3>Name : <% out.print(itemName); %></h3>
-                                                            <p>Price : <% out.print(itemPrice); %></p>
-                                                            <p>category : <% out.print(itemType); %></p>
-                                                            <p>Description : <% out.print(itemDescription); %></p>
+                                        <div id='imagediv'>
+                                            <%                                int x = menuArray.size();
+                                                for (int i = 0; i < x; i++) {
+                                                    String itemDescription = menuArray.get(i).getItemDescription();
+                                                    String itemName = menuArray.get(i).getItemName();
+                                                    String imagePath = menuArray.get(i).getItemImagePath();
+                                                    String itemPrice = menuArray.get(i).getItemPrice();
+                                                    String itemType = menuArray.get(i).getItemType();
+                                            %>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="col-md-3">
+                                                        <div class="thumbnail">
+                                                            <img alt="Bootstrap Thumbnail First" src="<% out.print(imagePath); %>" />
                                                         </div>
                                                     </div>
-                                                </div>                                                    
-
+                                                    <div class="col-md-7">
+                                                        <div class="thumbnail">
+                                                            <div class="caption">
+                                                                <h3>Name : <% out.print(itemName); %></h3>
+                                                                <p>Price : <% out.print(itemPrice); %></p>
+                                                                <p>category : <% out.print(itemType); %></p>
+                                                                <p>Description : <% out.print(itemDescription); %></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>
                                             </div>
+                                            <%
+                                                }
+                                            %>
                                         </div>
-                                        <%
-                                            }
-                                        %>
-
                                     </div>
                                 </div>
                             </div>
