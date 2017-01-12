@@ -10,7 +10,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link href="../css/style.css" rel="stylesheet" type="text/css"  media="all" />
+        <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     </head>
     <style>
@@ -34,10 +34,10 @@
             String name = user1.getName();
             if (name == "") {
                 log = "login";
-                logLink = "../login.jsp?login=nav/reviews.jsp";
+                logLink = "login.jsp?login=reviews.jsp";
             } else {
                 log = "logout";
-                logLink = "../logout.jsp?page=nav/reviews.jsp";
+                logLink = "logout.jsp?page=reviews.jsp";
             }
 
             pageContext.setAttribute("log", log);
@@ -48,13 +48,13 @@
             <div class="wrap">
                 <div class="top-header">
                     <div class="logo">
-                        <a href="../index.jsp"><img src="../images/logo2.png" title="logo" /></a>
+                        <a href="index.jsp"><img src="images/logo2.png" title="logo" /></a>
                     </div>
                     <div class="social-icons">
                         <ul>
-                            <li><a href="#"><img src="../images/facebook.png" title="facebook" /></a></li>
-                            <li><a href="#"><img src="../images/twitter.png" title="twitter" /></a></li>
-                            <li><a href="#"><img src="../images/google.png" title="google pluse" /></a></li>
+                            <li><a href="#"><img src="images/facebook.png" title="facebook" /></a></li>
+                            <li><a href="#"><img src="images/twitter.png" title="twitter" /></a></li>
+                            <li><a href="#"><img src="images/google.png" title="google pluse" /></a></li>
                         </ul>
                     </div>
                     <div class="clear"> </div>
@@ -62,7 +62,7 @@
                 <div class="top-nav">
                     <div class="top-nav-left">
                         <ul>
-                            <li><a href="../index.jsp">Home</a></li>
+                            <li><a href="index.jsp">Home</a></li>
                             <li><a href="menu.jsp">Menu</a></li>
                             <li><a href="reservation.jsp">Reservation</a></li>
                             <li><a href="promotion.jsp">Promotion</a></li>
@@ -81,19 +81,19 @@
             </div>
         </div>
         <div class="content">
-            <div><img src="../images/reviews.png"></div>
+            <div><img src="images/reviews.png"></div>
             <div class="contact">
                 <div class="wrap">
                     <div class="section group">
                         <div class="ifg">
                         <div>
                             <ul class="nav1">
-                                <li class="li1 active"><a class="a1" href="../reviews/articles.html" target="ihack">Articles</a></li>
-                                <li class="li1"><a class="a1" href="../reviews/writer.html" target="ihack">Reviews</a></li>
+                                <li class="li1 active"><a class="a1" href="reviews/articles.html" target="ihack">Articles</a></li>
+                                <li class="li1"><a class="a1" href="reviews/writer.html" target="ihack">Reviews</a></li>
                             </ul>
                         </div>
                         <div>
-                            <iframe src="../reviews/articles.html" name="ihack" width="100%" height="600px" style="border:1px solid black;"> </iframe>
+                            <iframe src="reviews/articles.html" name="ihack" width="100%" height="600px" style="border:1px solid black;"> </iframe>
                         </div>
                             </div>
                         <div class="col span_1_of_3">

@@ -92,10 +92,10 @@
                     <div class="top-nav-left">
                         <ul>
                             <li class="active"><a href="/SRMS-Website/index.jsp">Home</a></li>
-                            <li><a href="nav/menu.jsp">Menu</a></li>
-                            <li><a href="nav/reservation.jsp">Reservation</a></li>
-                            <li><a href="nav/promotion.jsp">Promotion</a></li>
-                            <li><a href="nav/reviews.jsp">Reviews</a></li>
+                            <li><a href="menu.jsp">Menu</a></li>
+                            <li><a href="reservation.jsp">Reservation</a></li>
+                            <li><a href="promotion.jsp">Promotion</a></li>
+                            <li><a href="reviews.jsp">Reviews</a></li>
                             <div class="clear"> </div>
                         </ul>
                     </div>
