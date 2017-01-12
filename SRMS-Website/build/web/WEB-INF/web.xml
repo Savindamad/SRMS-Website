@@ -37,6 +37,10 @@
         <servlet-name>AdminLogin</servlet-name>
         <servlet-class>Servletes.AdminLogin</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddPromotion</servlet-name>
+        <servlet-class>Servletes.AddPromotion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -68,6 +72,10 @@
     <servlet-mapping>
         <servlet-name>AdminLogin</servlet-name>
         <url-pattern>/AdminLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddPromotion</servlet-name>
+        <url-pattern>/AddPromotion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

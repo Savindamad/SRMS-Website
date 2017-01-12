@@ -29,18 +29,18 @@
                                 Add new promotion
                             </div>
                             <div class="panel-body">
-                                <form>
+                                <form action="AddPromotion" enctype="multipart/form-data">
                                     <div class="form-group">
-                                        <label>Title</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
+                                        <label for="title">Title</label>
+                                        <input type="text" class="form-control" id="title" name="title" placeholder="Promotion title" />
                                     </div>
                                     <div class="form-group">
-                                        <label>Description</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                        <label for="description">Description</label>
+                                        <input type="text" class="form-control" id="description" name="description" placeholder="Promotion description" />
                                     </div>
                                     <div class="form-group">
-                                        <label for="exampleInputFile">File input</label>
-                                        <input type="file" id="exampleInputFile" />
+                                        <label for="file">File input</label>
+                                        <input type="file" id="file" name="file" />
                                     </div>
                                     <button type="submit" class="btn btn-default">Submit</button>
                                     <hr />
