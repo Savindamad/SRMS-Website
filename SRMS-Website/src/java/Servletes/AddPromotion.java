@@ -1,87 +1,87 @@
 package Servletes;
 
-import Other.ImageUpload;
-import static com.sun.xml.internal.ws.spi.db.BindingContextFactory.LOGGER;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
+import Beans.Promotion;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.PrintWriter;
-import java.util.logging.Level;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.Part;
-import org.apache.commons.fileupload.FileItemIterator;
-import org.apache.commons.fileupload.FileItemStream;
-import org.apache.commons.fileupload.FileUploadException;
+import java.io.File;
+import java.util.List;
+import org.apache.commons.fileupload.FileItem;
+import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-/**
- *
- * @author savinda
- */
-public class AddPromotion extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+public class AddPromotion extends HttpServlet {
+    
+    private final String UPLOAD_DIRECTORY = "/home/savinda/Public/GroupProject/SRMS_Website/SRMS-Website/SRMS-Website/web/images/promotions";
+    
+    protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        // Create path components to save the file
-    final String path = request.getParameter("../images/promotions");
-    final Part filePart = request.getPart("file");
-    final String fileName = getFileName(filePart);
-
-    OutputStream out = null;
-    InputStream filecontent = null;
-    final PrintWriter writer = response.getWriter();
-
-    try {
-        out = new FileOutputStream(new File(path + File.separator
-                + fileName));
-        filecontent = filePart.getInputStream();
-
-        int read = 0;
-        final byte[] bytes = new byte[1024];
-
-        while ((read = filecontent.read(bytes)) != -1) {
-            out.write(bytes, 0, read);
-        }
-        writer.println("New file " + fileName + " created at " + path);
-        LOGGER.log(Level.INFO, "File{0}being uploaded to {1}", 
-                new Object[]{fileName, path});
-    } catch (FileNotFoundException fne) {
-        writer.println("You either did not specify a file to upload or are "
-                + "trying to upload a file to a protected or nonexistent "
-                + "location.");
-        writer.println("<br/> ERROR: " + fne.getMessage());
-
-        LOGGER.log(Level.SEVERE, "Problems during file upload. Error: {0}", 
-                new Object[]{fne.getMessage()});
-    } finally {
-        if (out != null) {
-            out.close();
-        }
-        if (filecontent != null) {
-            filecontent.close();
-        }
-        if (writer != null) {
-            writer.close();
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet AddPromotion</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet AddPromotion at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
     }
-}
-
-private String getFileName(final Part part) {
-    final String partHeader = part.getHeader("content-disposition");
-    LOGGER.log(Level.INFO, "Part Header = {0}", partHeader);
-    for (String content : part.getHeader("content-disposition").split(";")) {
-        if (content.trim().startsWith("filename")) {
-            return content.substring(
-                    content.indexOf('=') + 1).trim().replace("\"", "");
-        }
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        processRequest(request, response);
     }
-    return null;
-}
+
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        String imagePath = "../images/promotions/";
+       
+        //process only if its multipart content
+        if(ServletFileUpload.isMultipartContent(request)){
+            try {
+                List<FileItem> multiparts = new ServletFileUpload(
+                                         new DiskFileItemFactory()).parseRequest(request);
+               
+                for(FileItem item : multiparts){
+                    if(!item.isFormField()){
+                        String name = new File(item.getName()).getName();
+                        item.write( new File(UPLOAD_DIRECTORY + File.separator + name));
+                        imagePath = imagePath+name;
+                    }
+                }
+                
+                Promotion promotion = new Promotion();
+                promotion.AddPromotion(title, description, imagePath);
+               //File uploaded successfully
+               request.setAttribute("message", "File Uploaded Successfully");
+            } catch (Exception ex) {
+               request.setAttribute("message", "File Upload Failed due to " + ex);
+            }         
+          
+        }else{
+            request.setAttribute("message",
+                                 "Sorry this Servlet only handles file upload request");
+        }
+     
+        request.getRequestDispatcher("/admin_panel.jsp").forward(request, response);
+      
+    }
+    
+    @Override
+    public String getServletInfo() {
+        return "Short description";
+    }// </editor-fold>
+
 }

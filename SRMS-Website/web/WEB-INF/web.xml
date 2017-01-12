@@ -41,6 +41,10 @@
         <servlet-name>AddPromotion</servlet-name>
         <servlet-class>Servletes.AddPromotion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Review</servlet-name>
+        <servlet-class>Servletes.Review</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -76,6 +80,10 @@
     <servlet-mapping>
         <servlet-name>AddPromotion</servlet-name>
         <url-pattern>/AddPromotion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Review</servlet-name>
+        <url-pattern>/Review</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
