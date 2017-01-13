@@ -63,9 +63,8 @@
             } else {
                 log = "logout";
                 logLink = "logout.jsp?page=index.jsp";
-                //signup = user1.getName();
                 signLink = "#";
-                sign = "Savinda Keshan";
+                sign = name;
             }
 
             pageContext.setAttribute("log", log);
@@ -101,7 +100,7 @@
                     </div>
                     <div class="top-nav-right">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="${signupLink}"><span class="glyphicon glyphicon-user"></span>${sign}</a></li>        
+                            <li><a href="${signupLink}"><span class="glyphicon glyphicon-user"></span><% out.print(" "+sign); %></a></li>        
                             <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
                         </ul>
                     </div>

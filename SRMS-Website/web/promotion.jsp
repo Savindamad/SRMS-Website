@@ -32,12 +32,19 @@
             String log;
             String logLink;
             String name = user1.getName();
+            String sign = "";
+            String signupLink = "";
+
             if (name == "") {
                 log = "login";
                 logLink = "login.jsp?login=promotion.jsp";
+                sign = "Signup";
+                signupLink = "signup.jsp";
             } else {
                 log = "logout";
                 logLink = "logout.jsp?page=promotion.jsp";
+                sign = name;
+                signupLink = "#";
             }
 
             pageContext.setAttribute("log", log);
@@ -77,7 +84,7 @@
                     </div>
                     <div class="top-nav-right">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>        
+                            <li><a href="<% out.print(signupLink); %>"><span class="glyphicon glyphicon-user"></span><% out.print(" "+sign); %></a></li>        
                             <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
                         </ul>
                     </div>
@@ -94,8 +101,7 @@
         <div class="container-fluid" style="margin-top:40px">
             <div class="row">
                 <div class="col-md-12">
-                    <%
-                        for(int i = 0; i<proDetails.size(); i++){
+                    <%                        for (int i = 0; i < proDetails.size(); i++) {
                             PromotionDetails temp = proDetails.get(i);
                     %>
                     <div class="row">
@@ -116,7 +122,7 @@
                 </div>
             </div>
         </div>
-         <div class="footer">
+        <div class="footer">
             <div class="wrap">
                 <div class="footer-grid">
                     <h3></h3>

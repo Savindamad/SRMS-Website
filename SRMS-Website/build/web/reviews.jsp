@@ -39,12 +39,19 @@
             String log;
             String logLink;
             String name = user1.getName();
+            String sign = "";
+            String signupLink = "";
+
             if (name == "") {
                 log = "login";
                 logLink = "login.jsp?login=reviews.jsp";
+                sign = "Signup";
+                signupLink = "signup.jsp";
             } else {
                 log = "logout";
                 logLink = "logout.jsp?page=reviews.jsp";
+                sign = name;
+                signupLink = "#";
             }
 
             pageContext.setAttribute("log", log);
@@ -86,7 +93,7 @@
                     </div>
                     <div class="top-nav-right">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>        
+                            <li><a href="<% out.print(signupLink); %>"><span class="glyphicon glyphicon-user"></span><% out.print(" " + sign); %></a></li>        
                             <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
                         </ul>
                     </div>
@@ -144,7 +151,7 @@
                                                     <div class="col-md-1"></div>
                                                     <div class="col-md-9">
                                                         <div class="form-group">
-                                                            <textarea class="form-control" id ="comment" placeholder="Message"></textarea>
+                                                            <textarea class="form-control" id ="comment" placeholder="Write review"></textarea>
                                                         </div>
                                                         <input type="hidden" id="username" value="<% out.print(name); %>">
                                                     </div>
@@ -189,7 +196,7 @@
                 </div>
             </div>
         </div>
-         <div class="footer">
+        <div class="footer">
             <div class="wrap">
                 <div class="footer-grid">
                     <h3></h3>

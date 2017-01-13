@@ -35,7 +35,7 @@ public class Login extends HttpServlet {
                 
                 request.setAttribute("login", "success");
                 //RequestDispatcher rd1 = request.getRequestDispatcher(page);
-                response.sendRedirect("/SRMS-Website/"+page);
+                response.sendRedirect("/SRMS-Website/index.jsp");
                 
             }
             else{

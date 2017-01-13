@@ -35,16 +35,22 @@
             String logLink;
             String name = user1.getName();
             String selectPath;
+            
+            String sign = "";
+            String signupLink = "";
             if (name == "") {
                 log = "login";
                 logLink = "login.jsp?login=reservation.jsp";
                 selectPath = "ReDirectPage";
+                sign = "Signup";
+                signupLink = "signup.jsp";
 
             } else {
                 log = "logout";
                 logLink = "logout.jsp?page=reservation.jsp";
                 selectPath = "Reservation";
-
+                sign = name;
+                signupLink = "#";
             }
 
             pageContext.setAttribute("log", log);
@@ -79,7 +85,7 @@
                     </div>
                     <div class="top-nav-right">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>        
+                            <li><a href="<% out.print(signupLink); %>"><span class="glyphicon glyphicon-user"></span><% out.print(" "+sign); %></a></li>        
                             <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
                         </ul>
                     </div>
