@@ -70,7 +70,7 @@
                 </div>
                 <div class="social-icons">
                     <ul>
-                        <li><a href="#"><img src="images/facebook.png" title="facebook" /></a></li>
+                        <li><a href="https://www.facebook.com/pages/Maharaja-Palace-Colombo-7/102829946533873?nr"><img src="images/facebook.png" title="facebook" /></a></li>
                         <li><a href="#"><img src="images/twitter.png" title="twitter" /></a></li>
                         <li><a href="#"><img src="images/google.png" title="google pluse" /></a></li>
                     </ul>
