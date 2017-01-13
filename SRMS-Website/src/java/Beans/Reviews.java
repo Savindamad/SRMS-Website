@@ -42,6 +42,33 @@ public class Reviews {
         return comments;
     }
 
+    public ArrayList<Comment> getLastComments() {
+        ArrayList<Comment> comments = new ArrayList<>();
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String sqlString = "SELECT * FROM review WHERE status = 'ACCEPTED'";
+
+            Statement myStatement = myconnection.createStatement();
+            ResultSet rs = myStatement.executeQuery(sqlString);
+
+            while (rs.next()) {
+                String id = rs.getString("comment_id");
+                String name = rs.getString("cus_name");
+                String comment = rs.getString("comment");
+                String time = "";
+                Comment temp = new Comment(id, name, comment, time);
+                comments.add(temp);
+                int x = comments.size();
+            }
+            myStatement.close();
+            myconnection.close();
+        } catch (SQLException ex) {
+        }
+        return comments;
+    }
+
     public void acceptReview(String commentId) {
         try {
             DBConnection dbconn = new DBConnection();
@@ -72,6 +99,30 @@ public class Reviews {
             myconnection.close();
 
         } catch (Exception e) {
+        }
+    }
+
+    public void addComment(String comment, String username) {
+        try{
+            DBConnection dbconn=new DBConnection();
+            Connection myconnection= dbconn.connection();
+        
+            String sqlString="INSERT INTO review (cus_name,comment) VALUES ('"+username+"','"+comment+"')";
+            Statement myStatement = myconnection.createStatement();
+            
+            try{
+                myStatement.executeUpdate(sqlString);
+                myStatement.close();
+                myconnection.close();
+            }
+            catch(SQLException ex) 
+            {
+                Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        catch(SQLException ex) 
+        {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 }

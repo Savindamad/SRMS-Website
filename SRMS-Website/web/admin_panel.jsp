@@ -20,28 +20,54 @@
     </head>
     <body>
         <%
-        HttpSession sessionUser = request.getSession(false);
-        String name = (String) sessionUser.getAttribute("name");
+            HttpSession sessionUser = request.getSession(false);
+            String name = (String) sessionUser.getAttribute("name");
 
-        if (name == null) {
-            request.setAttribute("login", "fail");
-            response.sendRedirect("admin_login.jsp?login=fail");
-        } else {
+            if (name == null) {
+                request.setAttribute("login", "fail");
+                response.sendRedirect("admin_login.jsp?login=fail");
+            } else {
 
-        }
+            }
 
-    %>
-        <div class="navbar navbar-inverse set-radius-zero" style="height: 120px;">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="admin_panel.jsp">
-                        <img src="images/srms_logo.png" style="height: 80px"/>
-                    </a>
-
+        %>
+        <nav class="navbar navbar-default" style="margin-top:-2px; border-radius: 0px; border-color: #F8F8F8">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img alt="Brand" src="...">
+                        </a>
+                    </div>
+                    <div class="navbar-right" style="margin-right: 30px">
+                        <button type="submit" class="btn btn-default navbar-btn"><a href="logoutAdmin.jsp">Logout</a></button>
+                    </div>
                 </div>
-
+            </nav>
+        </nav>
+        <nav class="navbar navbar-default" style="margin-top: -2px; border-radius: 0px; border-color: #F8F8F8">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="acceptReviews.jsp">Accept reviews<span class="sr-only">(current)</span></a></li>
+                        <li><a href="addNewPromotion.jsp">Add promotion</a></li>
+                        <li><a href="#">Remove promotion</a></li>
+                        <li><a href="#">Add article</a></li>
+                        <li><a href="#">Remove article</a></li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </nav>
         <div class="content-wrapper">
             <div class="container">
                 <div class="row">

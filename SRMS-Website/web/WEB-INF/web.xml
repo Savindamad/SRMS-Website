@@ -45,6 +45,10 @@
         <servlet-name>SearchMenu</servlet-name>
         <servlet-class>Servletes.SearchMenu</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddComment</servlet-name>
+        <servlet-class>Servletes.AddComment</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -84,6 +88,10 @@
     <servlet-mapping>
         <servlet-name>SearchMenu</servlet-name>
         <url-pattern>/SearchMenu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddComment</servlet-name>
+        <url-pattern>/AddComment</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
