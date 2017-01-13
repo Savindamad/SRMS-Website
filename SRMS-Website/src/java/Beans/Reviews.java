@@ -57,7 +57,7 @@ public class Reviews {
                 String id = rs.getString("comment_id");
                 String name = rs.getString("cus_name");
                 String comment = rs.getString("comment");
-                String time = "";
+                String time = rs.getString("comment_date");
                 Comment temp = new Comment(id, name, comment, time);
                 comments.add(temp);
                 int x = comments.size();
@@ -74,12 +74,12 @@ public class Reviews {
             DBConnection dbconn = new DBConnection();
             Connection myconnection = dbconn.connection();
 
-            PreparedStatement ps1 = myconnection.prepareStatement("UPDATE review SET status = 'ACCEPTED' WHERE comment_id = ?");
+            String query = "update review set status = ? where comment_id = ?";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, "ACCEPTED");
+            preparedStmt.setInt(2, Integer.parseInt(commentId));
 
-            ps1.setString(1, commentId);
-
-            ResultSet rs1 = ps1.executeQuery();
-            myconnection.close();
+            preparedStmt.executeUpdate();
 
         } catch (Exception e) {
         }
@@ -91,38 +91,31 @@ public class Reviews {
             DBConnection dbconn = new DBConnection();
             Connection myconnection = dbconn.connection();
 
-            PreparedStatement ps1 = myconnection.prepareStatement("UPDATE review SET status = 'REJECTED' WHERE comment_id = ?");
+            String query = "update review set status = ? where comment_id = ?";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, "REJECTED");
+            preparedStmt.setInt(2, Integer.parseInt(commentId));
 
-            ps1.setString(1, commentId);
-
-            ResultSet rs1 = ps1.executeQuery();
-            myconnection.close();
+            preparedStmt.executeUpdate();
 
         } catch (Exception e) {
         }
     }
 
     public void addComment(String comment, String username) {
-        try{
-            DBConnection dbconn=new DBConnection();
-            Connection myconnection= dbconn.connection();
-        
-            String sqlString="INSERT INTO review (cus_name,comment) VALUES ('"+username+"','"+comment+"')";
-            Statement myStatement = myconnection.createStatement();
-            
-            try{
-                myStatement.executeUpdate(sqlString);
-                myStatement.close();
-                myconnection.close();
-            }
-            catch(SQLException ex) 
-            {
-                Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
-            }
-        }
-        catch(SQLException ex) 
-        {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = " insert into review (cus_name, comment) values (?, ?)";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, username);
+            preparedStmt.setString(2, comment);
+            preparedStmt.execute();
+
+            myconnection.close();
+
+        } catch (SQLException ex) {
         }
     }
 }

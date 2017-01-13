@@ -1,7 +1,6 @@
 $(document).ready(function () {
     $('#commentPost').click(function (event) {
         if ($('#username').val()!=""){
-            document.getElementById("username").value = "";
             $.ajax({
                 url: 'AddComment',
                 type: 'POST',
@@ -12,6 +11,7 @@ $(document).ready(function () {
                 success: function (responseText) {
                 }
             });
+            document.getElementById("comment").value = "";
         }
         else{
             alert("You have to loging!!..");

@@ -52,7 +52,7 @@ public class Review extends HttpServlet {
                 out.println("<p>"+comment+"</p>");
                 out.println("<div>");
                 out.println("<input type=\"hidden\" id=\"commentId\" value=\""+commentId+"\">");
-                out.println("<button class=\"btn btn-primary\" id=\"accept\">Accepted</button>");
+                out.println("<button class=\"btn btn-primary\" id=\"accept\">Accept</button>");
                 out.println("<button class=\"btn btn-danger\" id=\"reject\">Reject</button>");
                 out.println("</div>");
                 out.println("</div>");

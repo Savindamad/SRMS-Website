@@ -27,8 +27,8 @@
         }
     </style>
     <body>
+        <script src="js/jquery.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/addComment.js"></script>
-        <script srs="http://code.jquery.com/jquery-latest.js"></script>
         <%
             HttpSession sessionUser = request.getSession(false);
             String email = (String) sessionUser.getAttribute("email");
@@ -120,10 +120,10 @@
                                     <div class="tabbable" id="tabs-909797">
                                         <ul class="nav nav-tabs">
                                             <li>
-                                                <a href="#panel-700466" data-toggle="tab">Articles</a>
+                                                <a href="#panel-700466" data-toggle="tab">Articles about Maharaja Palace</a>
                                             </li>
                                             <li class="active">
-                                                <a href="#panel-521644" data-toggle="tab">Reviews</a>
+                                                <a href="#panel-521644" data-toggle="tab">Customer reviews</a>
                                             </li>
                                         </ul>
                                         <div class="tab-content">
@@ -167,7 +167,7 @@
                                                             String time = comments.get(i).getDate();
 
                                                     %>
-                                                    <div class="row">
+                                                    <div class="row" style="margin-top : 20px">
                                                         <div class="col-md-1"></div>
                                                         <div class="col-md-10">
                                                             <div class="media">
@@ -175,7 +175,7 @@
                                                                 <div class="media-body">
                                                                     <h4 class="media-heading"><% out.print(cusName); %></h4>
                                                                     <p><% out.print(cusComment); %></p>
-                                                                    <p><% out.print(time); %></p>
+                                                                    <h5><% out.print(time); %></h5>
                                                                 </div>
                                                             </div>
                                                         </div>
