@@ -60,49 +60,13 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li><a href="acceptReviews.jsp">Accept reviews</a></li>
-                        <li class="active"><a href="addNewPromotion.jsp">Add promotion<span class="sr-only">(current)</span></a></li>
+                        <li><a href="addNewPromotion.jsp">Add promotion</a></li>
                         <li><a href="removePromotion.jsp">Remove promotion</a></li>
-                        <li><a href="addArticle.jsp">Add article</a></li>
+                        <li class="active"><a href="addArticle.jsp">Add article<span class="sr-only">(current)</span></a></li>
                         <li><a href="removeArticle.jsp">Remove article</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="content-wrapper">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h1 class="page-head-line">Forms </h1>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                Add new promotion
-                            </div>
-                            <div class="panel-body">
-                                <form action="AddPromotion" enctype="multipart/form-data" method="POST">
-                                    <div class="form-group">
-                                        <label for="title">Title</label>
-                                        <input type="text" class="form-control" id="title" name="title" placeholder="Promotion title" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="description">Description</label>
-                                        <input type="text" class="form-control" id="description" name="description" placeholder="Promotion description" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="file">File input</label>
-                                        <input type="file" id="file" name="file" />
-                                    </div>
-                                    <button type="submit" class="btn btn-default">Submit</button>
-                                    <hr />
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </body>
 </html>

@@ -35,7 +35,7 @@
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="admin_panel.jsp">
                             <img alt="Brand" src="...">
                         </a>
                     </div>
@@ -55,15 +55,15 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"></a>
+                    <a class="navbar-brand" href="admin_panel.jsp"></a>
                 </div>
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="acceptReviews.jsp">Accept reviews<span class="sr-only">(current)</span></a></li>
+                        <li><a href="acceptReviews.jsp">Accept reviews<span class="sr-only">(current)</span></a></li>
                         <li><a href="addNewPromotion.jsp">Add promotion</a></li>
-                        <li><a href="#">Remove promotion</a></li>
-                        <li><a href="#">Add article</a></li>
-                        <li><a href="#">Remove article</a></li>
+                        <li><a href="removePromotion.jsp">Remove promotion</a></li>
+                        <li><a href="addArticle.jsp">Add article</a></li>
+                        <li><a href="removeArticle.jsp">Remove article</a></li>
                     </ul>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="removePromotion.jsp">
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="dashboard-div-wrapper bk-clr-four" style="background-color: #D9534F" >
                                 <i  class="fa fa-cogs dashboard-div-icon" ></i>
@@ -117,7 +117,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="#">
+                    <a href="addArticle.jsp">
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="dashboard-div-wrapper bk-clr-four" style="background-color: #F0AD4E">
                                 <i  class="fa fa-bell-o dashboard-div-icon" ></i>
@@ -126,7 +126,7 @@
                                     </div>
 
                                 </div>
-                                <h5>Simple Text Here </h5>
+                                <h5>Add new article</h5>
                             </div>
                         </div>
                     </a>

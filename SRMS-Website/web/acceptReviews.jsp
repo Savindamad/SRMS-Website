@@ -32,36 +32,44 @@
             ArrayList<Comment> comments = new ArrayList<Comment>();
             comments = reviews.getReviews();
         %>
-
-        <div class="container-fluid">
-            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
-                    </button> <a class="navbar-brand" href="#">Brand</a>
-                </div>
-
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#">Reviews</a>
-                        </li>
-                        <li>
-                            <a href="#">Promotions</a>
-                        </li>
-                        <li>
-                            <a href="#">statistics</a>
-                        </li>
-                        <li>
-                            <a href="#">Link</a>
-                        </li>
-
-                    </ul>
-                    <form class="navbar-form navbar-right" style="margin-right: 30px">
-                        <input type="submit" value="Logout">
-                    </form>
+        <nav class="navbar navbar-default" style="margin-top:-2px; border-radius: 0px; border-color: #F8F8F8">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="admin_panel.jsp">
+                            <img alt="Brand" src="...">
+                        </a>
+                    </div>
+                    <div class="navbar-right" style="margin-right: 30px">
+                        <button type="submit" class="btn btn-default navbar-btn"><a href="logoutAdmin.jsp">Logout</a></button>
+                    </div>
                 </div>
             </nav>
+        </nav>
+        <nav class="navbar navbar-default" style="margin-top: -2px; border-radius: 0px; border-color: #F8F8F8">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="admin_panel.jsp"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="acceptReviews.jsp">Accept reviews<span class="sr-only">(current)</span></a></li>
+                        <li><a href="addNewPromotion.jsp">Add promotion</a></li>
+                        <li><a href="removePromotion.jsp">Remove promotion</a></li>
+                        <li><a href="addArticle.jsp">Add article</a></li>
+                        <li><a href="removeArticle.jsp">Remove article</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">
             <div class="row" style="margin-top: 100px">
                 <div class="col-md-12">
                     <div id="reviews">
@@ -94,9 +102,10 @@
                     </div>
                 </div>
             </div>
+        </div>
 
-            <script src="assets/js/jquery.min.js"></script>
-            <script src="assets/js/bootstrap.min.js"></script>
-            <script src="assets/js/scripts.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
     </body>
 </html>
