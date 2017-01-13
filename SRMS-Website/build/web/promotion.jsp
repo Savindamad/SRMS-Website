@@ -116,6 +116,28 @@
                 </div>
             </div>
         </div>
+         <div class="footer">
+            <div class="wrap">
+                <div class="footer-grid">
+                    <h3></h3>
+                </div>
+                <div class="footer-grid center-grid">
+                    <h3></h3>
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="footer-grid"></div>
+                <div class="clear"> </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+        <div class="copy-right">
+            <div class="top-to-page">
+                <a href="#top" class="scroll"></a>
+                <div class="clear"></div>
+            </div>	
+        </div>        
     </body>
 </html>
 
