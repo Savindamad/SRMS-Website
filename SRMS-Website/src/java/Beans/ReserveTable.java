@@ -17,7 +17,7 @@ public class ReserveTable {
         ArrayList<TableInfo> tablesNew = new ArrayList<TableInfo>();
         tables = GetAvailableTables(time, date, type);
         for(int i = 0; i<tables.size(); i++){
-            if(tables.get(i).equals(seats)){
+            if(tables.get(i).getNumOfSeats().equals(seats)){
                 tablesNew.add(tables.get(i));
             }
         }

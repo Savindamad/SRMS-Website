@@ -2,6 +2,8 @@ package Servletes;
 
 import Beans.ReserveTable;
 import Beans.TableInfo;
+import Other.CombinationInfo;
+import Other.TableCombination;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -38,6 +40,11 @@ public class Reservation extends HttpServlet {
             
             ReserveTable reserve = new ReserveTable();
             ArrayList<TableInfo> availableTables = reserve.AvailableTables(time, date, type, seats);
+            TableCombination tableCombination = new TableCombination();
+            ArrayList<CombinationInfo> bestCombinations =new ArrayList<CombinationInfo>();
+            bestCombinations = tableCombination.getCombination(availableTables,seats);
+            
+            for(int i = 0; i<bestCombinations.size(); i++){
             
             out.write("<div class=\"col-md-4\">");
             out.write("<div class=\"thumbnail\">");
@@ -47,12 +54,13 @@ public class Reservation extends HttpServlet {
             out.write("<div class=\"col-md-8\">");
             out.write("<div class=\"thumbnail\">");
             out.write("<div class=\"caption\">");
-            out.write("<h3>Table number : 5</h3>");
-            out.write("<p>Number of seats : 8</p>");
+            out.write("<h3>Table number : "+bestCombinations.get(i).getTableNo()+"</h3>");
+            out.write("<p>Number of seats : "+bestCombinations.get(i).getNumOfSeats()+"</p>");
             out.write("<p><button class=\"btn btn-primary\">Book</button></p>");
             out.write("</div>");
             out.write("</div>");
             out.write("</div>");
+            }
             
         } catch (Exception e) {
         }

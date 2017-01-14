@@ -10,7 +10,7 @@ $(document).ready(function () {
                 date: $('#date').val()
             },
             success: function (responseText) {
-                $('#reservationInfo').text(responseText);
+                $('#reservationInfo').html(responseText);
             }
         });
     });
