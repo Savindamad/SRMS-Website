@@ -10,7 +10,7 @@
         <link href="css/style.css" rel="stylesheet" type="text/css"  media="all" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-        
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 
@@ -18,8 +18,8 @@
         <script src="js/reservation.js" type="text/javascript"></script>
         <style>
             .btn {
-            margin-right: 30px;
-        }
+                margin-right: 30px;
+            }
         </style>
     </head>
     <body>
@@ -35,7 +35,7 @@
             String logLink;
             String name = user1.getName();
             String selectPath;
-            
+
             String sign = "";
             String signupLink = "";
             if (name == "") {
@@ -85,7 +85,7 @@
                     </div>
                     <div class="top-nav-right">
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="<% out.print(signupLink); %>"><span class="glyphicon glyphicon-user"></span><% out.print(" "+sign); %></a></li>        
+                            <li><a href="<% out.print(signupLink); %>"><span class="glyphicon glyphicon-user"></span><% out.print(" " + sign);%></a></li>        
                             <li><button class="btn btn-default navbar-btn"><a href="${logLink}">${log}</a></button></li>
                         </ul>
                     </div>
@@ -103,20 +103,19 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-6" style="background-color: #ffffff;">
                             <div class="row"  style="margin-top:20px" id="reservationInfo">
-                                <div class="col-md-4">
-                                    <div class="thumbnail">
-                                        <img alt="Bootstrap Thumbnail First" src="http://lorempixel.com/output/people-q-c-600-200-1.jpg" />
-                                    </div>
-                                </div>
-                                <div class="col-md-8">
+                                <div class="col-md-12" style="margin-top : 20px">
                                     <div class="thumbnail">
                                         <div class="caption">
-                                            <h3>Table number : 5</h3>
-                                            <p>Number of seats : 8</p>
-                                            <p><button class="btn btn-primary">Book</button></p>
+                                            <h3>Terms and conditions</h3>
+                                            <p>We are committed to protect the privacy of personal information you may provide us on this Website.<br>
+                                                All the prices are mentioned in Sri Lankan Rupees (LKR) and you will be charged based on the prevailing exchange rate.<br>
+                                                When reserving tables an advance payment should paid as per customers.<br>
+                                                Reservation can be canceled before 24 hours.<br>
+                                                Advance payments can be refundable for early cancellations only.<br>
+                                                For late cancellations a fine will be charged.</p>
                                         </div>
                                     </div>
-                                </div>   
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-1"></div>
@@ -155,7 +154,7 @@
                 </div>
             </div>
         </div>
-         <div class="footer">
+        <div class="footer">
             <div class="wrap">
                 <div class="footer-grid">
                     <h3></h3>
@@ -177,6 +176,6 @@
                 <div class="clear"></div>
             </div>	
         </div>
-        
+
     </body>
 </html>
