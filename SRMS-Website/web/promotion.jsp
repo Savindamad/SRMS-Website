@@ -101,7 +101,8 @@
         <div class="container-fluid" style="margin-top:40px">
             <div class="row">
                 <div class="col-md-12">
-                    <%                        for (int i = 0; i < proDetails.size(); i++) {
+                    <%                        
+                        for (int i = 0; i < proDetails.size(); i++) {
                             PromotionDetails temp = proDetails.get(i);
                     %>
                     <div class="row">

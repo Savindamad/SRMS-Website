@@ -98,6 +98,14 @@
                         </div>
                         <%
                             }
+                            if (comments.size() == 0) {
+                        %>
+                        <div class="col-md-1"></div>
+                        <div>
+                            <h4>Empty</h4>
+                        </div>
+                        <%
+                            }
                         %>
                     </div>
                 </div>

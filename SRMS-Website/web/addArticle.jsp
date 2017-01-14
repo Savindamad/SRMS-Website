@@ -68,5 +68,44 @@
                 </div>
             </div>
         </nav>
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1 class="page-head-line">Add new article</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Add new article
+                            </div>
+                            <div class="panel-body">
+                                <form action="AddArticle" method="POST">
+                                    <div class="form-group">
+                                        <label for="title">Title</label>
+                                        <input type="text" class="form-control" name="title" placeholder="Article title" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Article</label>
+                                        <textarea type="text" class="form-control" id="description" name="article" placeholder="Article"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">About article</label>
+                                        <input type="text" class="form-control" id="aboutArticle" name="aboutArticle" placeholder="About article" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="description">Article link</label>
+                                        <input type="text" class="form-control" id="aboutLink" name="aboutLink" placeholder="Article link" />
+                                    </div>
+                                    <input type="submit" class="btn btn-primary" value="Add article">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

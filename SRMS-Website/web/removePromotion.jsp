@@ -4,21 +4,24 @@
     Author     : savinda
 --%>
 
+<%@page import="Beans.PromotionDetails"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Beans.Promotion"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-
         <title>Admin panel</title>
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <link href="assets/css/style.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     </head>
     <body>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/addComment.js"></script>
         <%
             HttpSession sessionUser = request.getSession(false);
             String name = (String) sessionUser.getAttribute("name");
@@ -68,5 +71,86 @@
                 </div>
             </div>
         </nav>
+        <div class="container-fluid" style="margin-top: 50px">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="tabbable" id="tabs-638888">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#panel-621843" data-toggle="tab">Display</a>
+                            </li>
+                            <li>
+                                <a href="#panel-733178" data-toggle="tab">Not display</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="panel-621843">
+                                <div id="" style="margin-top: 40px">
+                                    <%                                        Promotion promotions = new Promotion();
+                                        ArrayList<PromotionDetails> proDetails = new ArrayList<PromotionDetails>();
+                                        proDetails = promotions.getPromotions();
+
+                                        for (int i = 0; i < proDetails.size(); i++) {
+                                            PromotionDetails temp = proDetails.get(i);
+                                    %>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-10">
+                                            <div class="thumbnail">
+                                                <img alt="Bootstrap Thumbnail First" src="<% out.print(temp.getImagePath()); %>" />
+                                                <div class="caption">
+                                                    <h3><% out.print(temp.getTitle()); %></h3>
+                                                    <p><% out.print(temp.getDescription()); %></p>
+                                                    <p>
+                                                        <input type="hidden" value="<% out.print(temp.getId()); %>" id="promoId"/>
+                                                        <button class="btn btn-danger" id="deletePromo">Delete</button>
+                                                        <button class="btn btn-primary" id="removePromo">Remove</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%
+                                        }
+                                    %>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="panel-733178">
+                                <div id="" style="margin-top: 40px">
+                                    <%
+                                        ArrayList<PromotionDetails> proNotDetails = new ArrayList<PromotionDetails>();
+                                        proNotDetails = promotions.getNotDisplayedPromotions();
+
+                                        for (int i = 0; i < proNotDetails.size(); i++) {
+                                            PromotionDetails temp = proNotDetails.get(i);
+                                    %>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-10">
+                                            <div class="thumbnail">
+                                                <img alt="Bootstrap Thumbnail First" src="<% out.print(temp.getImagePath()); %>" />
+                                                <div class="caption">
+                                                    <h3><% out.print(temp.getTitle()); %></h3>
+                                                    <p><% out.print(temp.getDescription()); %></p>
+                                                    <p>
+                                                        <input type="hidden" value="<% out.print(temp.getId()); %>" id="promoId"/>
+                                                        <button class="btn btn-danger" id="deletePromo">Delete</button>
+                                                        <button class="btn btn-primary" id="repostPromo">Re-post</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%
+                                        }
+                                    %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

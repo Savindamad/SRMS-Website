@@ -78,7 +78,7 @@
 
                 </div>
                 <div class="row">
-                    <a href="acceptReview.jsp">
+                    <a href="acceptReviews.jsp">
                         <div class="col-md-3 col-sm-3 col-xs-6">
                             <div class="dashboard-div-wrapper bk-clr-four" style="background-color: #4e91fd">
                                 <i  class="fa fa-venus dashboard-div-icon" ></i>
@@ -113,7 +113,7 @@
                                     </div>
 
                                 </div>
-                                <h5>Delete old promotions</h5>
+                                <h5>Customize old promotions</h5>
                             </div>
                         </div>
                     </a>

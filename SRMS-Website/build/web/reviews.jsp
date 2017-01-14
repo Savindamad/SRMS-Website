@@ -132,6 +132,8 @@
                                                     for (int i = 0; i < articals.size(); i++) {
                                                         String title = articals.get(i).getTitle();
                                                         String content = articals.get(i).getContent();
+                                                        String about = articals.get(i).getAboutArticle();
+                                                        String link = articals.get(i).getArticleLink();
 
                                                 %>
                                                 <div class="col-md-12" style="margin-top : 40px">
@@ -139,6 +141,8 @@
                                                         <div class="caption">
                                                             <h3><% out.print(title); %></h3>
                                                             <p><% out.print(content); %></p>
+                                                            <p><small>-<cite><% out.print(about); %></cite></small></p>
+                                                            <a href="<% out.print(link); %>">Link</a>
                                                         </div>
                                                     </div>
                                                 </div>

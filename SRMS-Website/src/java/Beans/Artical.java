@@ -2,6 +2,7 @@ package Beans;
 
 import DB.DBConnection;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -26,7 +27,9 @@ public class Artical {
                 String id = rs.getString("id");
                 String title = rs.getString("title");
                 String content = rs.getString("content");
-                ArticalDetails temp = new ArticalDetails(id, title, content);
+                String aboutArticle = rs.getString("aboutArticle");
+                String articleLink = rs.getString("articleLink");
+                ArticalDetails temp = new ArticalDetails(id, title, content, aboutArticle, articleLink);
                 articals.add(temp);
             }
             st.close();
@@ -35,6 +38,23 @@ public class Artical {
         }
         return articals;
     }
-    public void AddArtical(){
+
+    public void AddArtical(String title, String article, String aboutArticle, String articleLink) {
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = " insert into article (title, content, aboutArticle, articleLink) values (?, ?, ?, ?)";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, title);
+            preparedStmt.setString(2, article);
+            preparedStmt.setString(3, aboutArticle);
+            preparedStmt.setString(4, articleLink);
+            preparedStmt.execute();
+
+            myconnection.close();
+
+        } catch (SQLException ex) {
+        }
     }
 }

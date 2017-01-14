@@ -4,6 +4,9 @@
     Author     : savinda
 --%>
 
+<%@page import="Beans.Artical"%>
+<%@page import="Beans.ArticalDetails"%>
+<%@page import="java.util.ArrayList"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -14,11 +17,17 @@
         <meta name="author" content="" />
 
         <title>Admin panel</title>
+        <meta charset="utf-8" />
+        <title>Admin panel</title>
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
         <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <link href="assets/css/style.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     </head>
     <body>
+        <script src="js/jquery.js" type="text/javascript"></script>
+        <script type="text/javascript" src="js/addComment.js"></script>
         <%
             HttpSession sessionUser = request.getSession(false);
             String name = (String) sessionUser.getAttribute("name");
@@ -68,5 +77,90 @@
                 </div>
             </div>
         </nav>
+        <div class="container-fluid" style="margin-top: 50px">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="tabbable" id="tabs-638888">
+                        <ul class="nav nav-tabs">
+                            <li class="active">
+                                <a href="#panel-621843" data-toggle="tab">Display</a>
+                            </li>
+                            <li>
+                                <a href="#panel-733178" data-toggle="tab">Not display</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="panel-621843">
+                                <div id="" style="margin-top: 40px">
+                                    <%                                        Artical articles = new Artical();
+                                        ArrayList<ArticalDetails> articleDetails = new ArrayList<ArticalDetails>();
+                                        articleDetails = articles.GetArticals();
+
+                                        for (int i = 0; i < articleDetails.size(); i++) {
+                                            ArticalDetails temp = articleDetails.get(i);
+                                    %>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-10">
+                                            <div class="thumbnail">
+                                                <div class="caption">
+                                                    <h3><% out.print(temp.getTitle()); %></h3>
+                                                    <p><% out.print(temp.getContent()); %></p>
+                                                    <p><small>-<cite><% out.print(temp.getAboutArticle()); %></cite></small></p>
+                                                    <a href="<% out.print(temp.getArticleLink()); %>">Link</a>
+                                                    <p></p>
+                                                    <p>
+                                                        <input type="hidden" value="<% out.print(temp.getId()); %>" id="promoId"/>
+                                                        <button class="btn btn-danger" id="deleteArticle">Delete</button>
+                                                        <button class="btn btn-primary" id="removeArticle">Remove</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%
+                                        }
+                                    %>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="panel-733178">
+                                <div id="" style="margin-top: 40px">
+                                    <%
+                                        ArrayList<ArticalDetails> articleNotDisplayed = new ArrayList<ArticalDetails>();
+                                        articleDetails = articles.GetArticals();
+
+                                        for (int i = 0; i < articleDetails.size(); i++) {
+                                            ArticalDetails temp = articleDetails.get(i);
+                                    %>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-10">
+                                            <div class="thumbnail">
+                                                <div class="caption">
+                                                    <h3><% out.print(temp.getTitle()); %></h3>
+                                                    <p><% out.print(temp.getContent()); %></p>
+                                                    <p><small>-<cite><% out.print(temp.getAboutArticle()); %></cite></small></p>
+                                                    <a href="<% out.print(temp.getArticleLink()); %>">Link</a>
+                                                    <p></p>
+                                                    <p>
+                                                        <input type="hidden" value="<% out.print(temp.getId()); %>" id="promoId"/>
+                                                        <button class="btn btn-danger" id="deleteArticle">Delete</button>
+                                                        <button class="btn btn-primary" id="removeArticle">Remove</button>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <%
+                                        }
+                                    %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

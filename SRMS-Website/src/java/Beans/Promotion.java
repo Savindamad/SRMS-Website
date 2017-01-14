@@ -56,6 +56,32 @@ public class Promotion {
             String error = ex.toString();
         }
     }
+    public ArrayList<PromotionDetails> getNotDisplayedPromotions(){
+        ArrayList<PromotionDetails> promotionsNotDisplayed = new ArrayList<PromotionDetails>();
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = "SELECT * FROM promotion WHERE status = 'NOT-DISPLAY'";
+            Statement st = myconnection.createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                String id = rs.getString("id");
+                String title = rs.getString("title");
+                String description = rs.getString("description");
+                String imagePath = rs.getString("image_path");
+
+                PromotionDetails temp = new PromotionDetails(id, title, description, imagePath);
+                promotionsNotDisplayed.add(temp);
+
+            }
+            st.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return promotionsNotDisplayed;
+    }
 
 }
  

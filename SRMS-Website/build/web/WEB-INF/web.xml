@@ -49,6 +49,10 @@
         <servlet-name>AddComment</servlet-name>
         <servlet-class>Servletes.AddComment</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddArticle</servlet-name>
+        <servlet-class>Servletes.AddArticle</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -92,6 +96,10 @@
     <servlet-mapping>
         <servlet-name>AddComment</servlet-name>
         <url-pattern>/AddComment</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddArticle</servlet-name>
+        <url-pattern>/AddArticle</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
