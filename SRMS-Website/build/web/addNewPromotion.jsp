@@ -72,7 +72,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1 class="page-head-line">Forms </h1>
+                        <h1 class="page-head-line">Add new promotion</h1>
                     </div>
                 </div>
                 <div class="row">
@@ -85,7 +85,7 @@
                                 <form action="AddPromotion" enctype="multipart/form-data" method="POST">
                                     <div class="form-group">
                                         <label for="title">Title</label>
-                                        <input type="text" class="form-control" id="title" name="title" placeholder="Promotion title" />
+                                        <input type="text" class="form-control" name="title" placeholder="Promotion title" />
                                     </div>
                                     <div class="form-group">
                                         <label for="description">Description</label>
@@ -95,7 +95,7 @@
                                         <label for="file">File input</label>
                                         <input type="file" id="file" name="file" />
                                     </div>
-                                    <button type="submit" class="btn btn-default">Submit</button>
+                                    <input type="submit" class="btn btn-primary" value="Add promotion">
                                     <hr />
                                 </form>
                             </div>

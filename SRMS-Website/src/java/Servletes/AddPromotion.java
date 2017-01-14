@@ -13,27 +13,47 @@ import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
 import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
-
 public class AddPromotion extends HttpServlet {
-    
+
     private final String UPLOAD_DIRECTORY = "/home/savinda/Public/GroupProject/SRMS_Website/SRMS-Website/SRMS-Website/web/images/promotions";
-    
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet AddPromotion</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet AddPromotion at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        String title = request.getParameter("title");
+        String description = request.getParameter("description");
+        String imagePath = "images/promotions/";
+
+        //process only if its multipart content
+        if (ServletFileUpload.isMultipartContent(request)) {
+            try {
+                List<FileItem> multiparts = new ServletFileUpload(
+                        new DiskFileItemFactory()).parseRequest(request);
+
+                for (FileItem item : multiparts) {
+                    if (!item.isFormField()) {
+                        String name = new File(item.getName()).getName();
+                        item.write(new File(UPLOAD_DIRECTORY + File.separator + name));
+                        imagePath = imagePath + name;
+                    }
+                }
+
+                Promotion promotion = new Promotion();
+                promotion.AddPromotion(title, description, imagePath);
+                //File uploaded successfully
+                request.setAttribute("message", "File Uploaded Successfully");
+            } catch (Exception ex) {
+                request.setAttribute("message", "File Upload Failed due to " + ex);
+            }
+
+        } else {
+            request.setAttribute("message",
+                    "Sorry this Servlet only handles file upload request");
         }
+
+        request.getRequestDispatcher("/admin_panel.jsp").forward(request, response);
     }
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -43,42 +63,9 @@ public class AddPromotion extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String title = request.getParameter("title");
-        String description = request.getParameter("description");
-        String imagePath = "../images/promotions/";
-       
-        //process only if its multipart content
-        if(ServletFileUpload.isMultipartContent(request)){
-            try {
-                List<FileItem> multiparts = new ServletFileUpload(
-                                         new DiskFileItemFactory()).parseRequest(request);
-               
-                for(FileItem item : multiparts){
-                    if(!item.isFormField()){
-                        String name = new File(item.getName()).getName();
-                        item.write( new File(UPLOAD_DIRECTORY + File.separator + name));
-                        imagePath = imagePath+name;
-                    }
-                }
-                
-                Promotion promotion = new Promotion();
-                promotion.AddPromotion(title, description, imagePath);
-               //File uploaded successfully
-               request.setAttribute("message", "File Uploaded Successfully");
-            } catch (Exception ex) {
-               request.setAttribute("message", "File Upload Failed due to " + ex);
-            }         
-          
-        }else{
-            request.setAttribute("message",
-                                 "Sorry this Servlet only handles file upload request");
-        }
-     
-        request.getRequestDispatcher("/admin_panel.jsp").forward(request, response);
-      
+        processRequest(request, response);
     }
-    
+
     @Override
     public String getServletInfo() {
         return "Short description";

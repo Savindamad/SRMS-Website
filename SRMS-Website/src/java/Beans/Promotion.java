@@ -48,14 +48,14 @@ public class Promotion {
             DBConnection dbconn = new DBConnection();
             Connection myconnection = dbconn.connection();
 
-            String query = "INSERT INTO promotion (id, title, description, time, image_path, status) VALUES (NULL, '"+title+"', '"+description+"', CURRENT_TIMESTAMP, '"+path+"', 'DISPLAY')";
-            //String query = "INSERT INTO promotion (title, description, time, image_path, status) VALUES ('a', 's', CURRENT_TIMESTAMP, 'a', 'DISPLAY');";
-            Statement st = myconnection.createStatement();
-            ResultSet rs = st.executeQuery(query);
+            Statement st = myconnection.createStatement(); 
+            st.executeUpdate("INSERT INTO promotion (title, description, image_path, status) " + 
+                "VALUES ('"+title+"', '"+description+"', '"+path+"', 'DISPLAY')"); 
             
         } catch (SQLException ex) {
-            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+            String error = ex.toString();
         }
     }
 
 }
+ 
