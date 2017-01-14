@@ -5,7 +5,7 @@ $(document).ready(function () {
             url: 'Review',
             data: {
                 commentId: $('#commentId').val(),
-                status : "accept"
+                status: "accept"
 
             },
             success: function (responseText) {
@@ -19,7 +19,7 @@ $(document).ready(function () {
             url: 'Review',
             data: {
                 commentId: $('#commentId').val(),
-                status : "reject"
+                status: "reject"
             },
             success: function (responseText) {
                 $('#reviews').html(responseText);
@@ -27,5 +27,4 @@ $(document).ready(function () {
         });
     });
 });
-
 

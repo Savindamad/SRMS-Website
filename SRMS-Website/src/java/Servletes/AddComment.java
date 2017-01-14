@@ -13,8 +13,8 @@ public class AddComment extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            String comment = request.getParameter("comment");
-            String username = request.getParameter("username");
+            String comment = request.getParameter("promoId");
+            String username = request.getParameter("status");
             if(username.equals("")){
                 request.setAttribute("login", "fail");
                 response.sendRedirect("login.jsp");

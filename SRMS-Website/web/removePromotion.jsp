@@ -11,17 +11,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>Admin panel</title>
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
-        <link href="assets/css/font-awesome.css" rel="stylesheet" />
         <link href="assets/css/style.css" rel="stylesheet" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
     </head>
     <body>
         <script src="js/jquery.js" type="text/javascript"></script>
-        <script type="text/javascript" src="js/addComment.js"></script>
+        <script type="text/javascript" src="js/customizePromotion.js"></script>
         <%
             HttpSession sessionUser = request.getSession(false);
             String name = (String) sessionUser.getAttribute("name");
@@ -72,7 +69,7 @@
             </div>
         </nav>
         <div class="container-fluid" style="margin-top: 50px">
-            <div class="row">
+            <div class="row" id="promoReplaceId">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <div class="tabbable" id="tabs-638888">
@@ -103,9 +100,8 @@
                                                     <h3><% out.print(temp.getTitle()); %></h3>
                                                     <p><% out.print(temp.getDescription()); %></p>
                                                     <p>
-                                                        <input type="hidden" value="<% out.print(temp.getId()); %>" id="promoId"/>
-                                                        <button class="btn btn-danger" id="deletePromo">Delete</button>
-                                                        <button class="btn btn-primary" id="removePromo">Remove</button>
+                                                        <button class="btn btn-danger" onclick="deleteFunction(<% out.print(temp.getId()); %>)">Delete</button>
+                                                        <button class="btn btn-primary" onclick="removeFunction(<% out.print(temp.getId()); %>)">Remove</button>
                                                     </p>
                                                 </div>
                                             </div>
@@ -134,9 +130,8 @@
                                                     <h3><% out.print(temp.getTitle()); %></h3>
                                                     <p><% out.print(temp.getDescription()); %></p>
                                                     <p>
-                                                        <input type="hidden" value="<% out.print(temp.getId()); %>" id="promoId"/>
-                                                        <button class="btn btn-danger" id="deletePromo">Delete</button>
-                                                        <button class="btn btn-primary" id="repostPromo">Re-post</button>
+                                                        <button class="btn btn-danger" onclick="deleteFunction(<% out.print(temp.getId()); %>)">Delete</button>
+                                                        <button class="btn btn-primary" onclick="repostFunction(<% out.print(temp.getId()); %>)">Re-post</button>
                                                     </p>
                                                 </div>
                                             </div>
@@ -152,5 +147,8 @@
                 </div>
             </div>
         </div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
     </body>
 </html>

@@ -121,6 +121,14 @@
                                     </div>
                                     <%
                                         }
+                                        if (articleDetails.size() == 0) {
+                                    %>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-10"><h4>Empty</h4></div>
+                                    </div>
+                                    <%
+                                    }
                                     %>
                                 </div>
                             </div>
@@ -128,10 +136,10 @@
                                 <div id="" style="margin-top: 40px">
                                     <%
                                         ArrayList<ArticalDetails> articleNotDisplayed = new ArrayList<ArticalDetails>();
-                                        articleDetails = articles.GetArticals();
+                                        articleNotDisplayed = articles.getNotDisplayedArticals();
 
-                                        for (int i = 0; i < articleDetails.size(); i++) {
-                                            ArticalDetails temp = articleDetails.get(i);
+                                        for (int i = 0; i < articleNotDisplayed.size(); i++) {
+                                            ArticalDetails temp = articleNotDisplayed.get(i);
                                     %>
                                     <div class="row">
                                         <div class="col-md-1"></div>
@@ -146,7 +154,7 @@
                                                     <p>
                                                         <input type="hidden" value="<% out.print(temp.getId()); %>" id="promoId"/>
                                                         <button class="btn btn-danger" id="deleteArticle">Delete</button>
-                                                        <button class="btn btn-primary" id="removeArticle">Remove</button>
+                                                        <button class="btn btn-primary" id="repostArticle">Re-post</button>
                                                     </p>
                                                 </div>
                                             </div>
@@ -154,6 +162,14 @@
                                     </div>
                                     <%
                                         }
+                                        if (articleNotDisplayed.size() == 0) {
+                                    %>
+                                    <div class="row">
+                                        <div class="col-md-1"></div>
+                                        <div class="col-md-10"><h4>Empty</h4></div>
+                                    </div>
+                                    <%
+                                    }
                                     %>
                                 </div>
                             </div>

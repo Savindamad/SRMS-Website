@@ -48,15 +48,16 @@ public class Promotion {
             DBConnection dbconn = new DBConnection();
             Connection myconnection = dbconn.connection();
 
-            Statement st = myconnection.createStatement(); 
-            st.executeUpdate("INSERT INTO promotion (title, description, image_path, status) " + 
-                "VALUES ('"+title+"', '"+description+"', '"+path+"', 'DISPLAY')"); 
-            
+            Statement st = myconnection.createStatement();
+            st.executeUpdate("INSERT INTO promotion (title, description, image_path, status) "
+                    + "VALUES ('" + title + "', '" + description + "', '" + path + "', 'DISPLAY')");
+
         } catch (SQLException ex) {
             String error = ex.toString();
         }
     }
-    public ArrayList<PromotionDetails> getNotDisplayedPromotions(){
+
+    public ArrayList<PromotionDetails> getNotDisplayedPromotions() {
         ArrayList<PromotionDetails> promotionsNotDisplayed = new ArrayList<PromotionDetails>();
         try {
             DBConnection dbconn = new DBConnection();
@@ -83,5 +84,57 @@ public class Promotion {
         return promotionsNotDisplayed;
     }
 
+    public void deletePomotion(String id) {
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = "delete from promotion where id = ?";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, id);
+
+            preparedStmt.execute();
+            myconnection.close();
+        } catch (Exception e) {
+        }
+    }
+
+    public void removePomotion(String id) {
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = "update promotion set status = ? where id = ?";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, "NOT-DISPLAY");
+            preparedStmt.setString(2, id);
+
+            preparedStmt.executeUpdate();
+
+            preparedStmt.execute();
+            
+            myconnection.close();
+        } catch (Exception e) {
+        }
+    }
+
+    public void repostPomotion(String id) {
+       try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = "update promotion set status = ? where id = ?";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, "DISPLAY");
+            preparedStmt.setString(2, id);
+
+            preparedStmt.executeUpdate();
+
+            preparedStmt.execute();
+            
+            myconnection.close();
+        } catch (Exception e) {
+        }
+    }
+
 }
- 

@@ -38,6 +38,33 @@ public class Artical {
         }
         return articals;
     }
+    
+    public ArrayList<ArticalDetails> getNotDisplayedArticals() {
+        ArrayList<ArticalDetails> articals = new ArrayList<ArticalDetails>();
+
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = "SELECT * FROM article WHERE status = 'NOT-DISPLAY'";
+            Statement st = myconnection.createStatement();
+            ResultSet rs = st.executeQuery(query);
+
+            while (rs.next()) {
+                String id = rs.getString("id");
+                String title = rs.getString("title");
+                String content = rs.getString("content");
+                String aboutArticle = rs.getString("aboutArticle");
+                String articleLink = rs.getString("articleLink");
+                ArticalDetails temp = new ArticalDetails(id, title, content, aboutArticle, articleLink);
+                articals.add(temp);
+            }
+            st.close();
+        } catch (SQLException ex) {
+            Logger.getLogger(User.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return articals;
+    }
 
     public void AddArtical(String title, String article, String aboutArticle, String articleLink) {
         try {
@@ -57,4 +84,5 @@ public class Artical {
         } catch (SQLException ex) {
         }
     }
+    
 }

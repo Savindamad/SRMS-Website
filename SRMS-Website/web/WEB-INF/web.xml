@@ -53,6 +53,10 @@
         <servlet-name>AddArticle</servlet-name>
         <servlet-class>Servletes.AddArticle</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Promotions</servlet-name>
+        <servlet-class>Servletes.Promotions</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -100,6 +104,10 @@
     <servlet-mapping>
         <servlet-name>AddArticle</servlet-name>
         <url-pattern>/AddArticle</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Promotions</servlet-name>
+        <url-pattern>/Promotions</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
