@@ -147,7 +147,7 @@
                                     <label for="seats">Number of seats</label>
                                     <input class="form-control" type="number" name="numOfSeats" id="seats" min="1" max="15">
                                 </div>
-                                <input type="button" class="btn btn-default" name="reserve" id="reserve" value="Reserve table">
+                                <input type="button" class="btn btn-default" name="reserve" id="reserve" value="Check available tables">
                             </form>
                         </div>
                     </div>

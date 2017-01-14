@@ -33,25 +33,26 @@ public class SearchMenu extends HttpServlet {
                 String itemPrice = menuItems.get(i).getItemPrice();
                 String itemType = menuItems.get(i).getItemType();
                 
-                out.println("<div class=\"row\">");
-                out.println("<div class=\"col-md-12\">");
-                out.println("<div class=\"col-md-3\">");
-                out.println("<div class=\"thumbnail\">");
-                out.println("<img alt=\"Bootstrap Thumbnail First\" src=\"" + imagePath + "\" />");
-                out.println("</div>");
-                out.println("</div>");
-                out.println("<div class=\"col-md-7\">");
-                out.println("<div class=\"thumbnail\">");
-                out.println("<div class=\"caption\">");
-                out.println("<h3>Name : "+itemName+"</h3>");
-                out.println("<p>Price : "+itemPrice+"</p>");
-                out.println("<p>category : "+itemType+"</p>");
-                out.println("<p>Description : "+itemDescription+"</p>");
-                out.println("</div>");
-                out.println("</div>");
-                out.println("</div>");
-                out.println("</div>");
-                out.println("</div>");
+                out.println("<div class=\"row\">\n" +
+"                                                <div class=\"col-md-12\">\n" +
+"                                                    <div class=\"col-md-3\">\n" +
+"                                                        <div class=\"thumbnail\">\n" +
+"                                                            <img alt=\"Bootstrap Thumbnail First\" src=\""+imagePath+"\" />\n" +
+"                                                        </div>\n" +
+"                                                    </div>\n" +
+"                                                    <div class=\"col-md-7\">\n" +
+"                                                        <div class=\"thumbnail\">\n" +
+"                                                            <div class=\"caption\">\n" +
+"                                                                <h3>Name : "+itemName+"</h3>\n" +
+"                                                                <p>Price : "+itemPrice+"<br>\n" +
+"                                                                category : "+itemType+"<br>\n" +
+"                                                                Description : "+itemDescription+"</p>\n" +
+"                                                                <div id=\"hearts-existing\" class=\"starrr\" data-rating='3'></div>\n" +
+"                                                            </div>\n" +
+"                                                        </div>\n" +
+"                                                    </div>                                                    \n" +
+"                                                </div>\n" +
+"                                            </div>");
             }
         } catch (Exception e) {
         }

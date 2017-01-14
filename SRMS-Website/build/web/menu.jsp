@@ -33,6 +33,7 @@
 <body>
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/searchMenu.js" type="text/javascript"></script>
+    <script src="js/rating.js" type="text/javascript"></script>
     <%
         HttpSession sessionUser = request.getSession(false);
         String email = (String) sessionUser.getAttribute("email");
@@ -164,9 +165,10 @@
                                                         <div class="thumbnail">
                                                             <div class="caption">
                                                                 <h3>Name : <% out.print(itemName); %></h3>
-                                                                <p>Price : <% out.print(itemPrice); %></p>
-                                                                <p>category : <% out.print(itemType); %></p>
-                                                                <p>Description : <% out.print(itemDescription); %></p>
+                                                                <p>Price : <% out.print(itemPrice); %><br>
+                                                                category : <% out.print(itemType); %><br>
+                                                                Description : <% out.print(itemDescription); %></p>
+                                                                <div id="hearts-existing" class="starrr" data-rating='3'></div>
                                                             </div>
                                                         </div>
                                                     </div>                                                    
