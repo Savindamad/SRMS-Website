@@ -34,10 +34,10 @@ public class CustomizeArticle extends HttpServlet {
                     + "                    <div class=\"tabbable\" id=\"tabs-638888\">\n"
                     + "                        <ul class=\"nav nav-tabs\">\n"
                     + "                            <li class=\"active\">\n"
-                    + "                                <a href=\"#panel-621843\" data-toggle=\"tab\">Display</a>\n"
+                    + "                                <a href=\"#panel-621843\" data-toggle=\"tab\">Displayed</a>\n"
                     + "                            </li>\n"
                     + "                            <li>\n"
-                    + "                                <a href=\"#panel-733178\" data-toggle=\"tab\">Not display</a>\n"
+                    + "                                <a href=\"#panel-733178\" data-toggle=\"tab\">Hidden</a>\n"
                     + "                            </li>\n"
                     + "                        </ul>\n"
                     + "                        <div class=\"tab-content\">\n"
@@ -61,7 +61,7 @@ public class CustomizeArticle extends HttpServlet {
                         + "                                                    <p></p>\n"
                         + "                                                    <p>\n"
                         + "                                                        <button class=\"btn btn-danger\" onclick=\"deleteFunction(" + temp.getId() + ")\">Delete</button>\n"
-                        + "                                                        <button class=\"btn btn-primary\" onclick=\"removeFunction(" + temp.getId() + ")\">Remove</button>\n"
+                        + "                                                        <button class=\"btn btn-primary\" onclick=\"removeFunction(" + temp.getId() + ")\">Hide</button>\n"
                         + "                                                    </p>\n"
                         + "                                                </div>\n"
                         + "                                            </div>\n"
@@ -71,7 +71,7 @@ public class CustomizeArticle extends HttpServlet {
             if (articleDetails.size() == 0) {
                 out.println("<div class=\"row\">\n"
                         + "                                        <div class=\"col-md-1\"></div>\n"
-                        + "                                        <div class=\"col-md-10\"><h4>Empty</h4></div>\n"
+                        + "                                        <div class=\"col-md-10\"><h4>No articles displayed</h4></div>\n"
                         + "                                    </div>");
             }
             out.println("</div>\n"
@@ -95,7 +95,7 @@ public class CustomizeArticle extends HttpServlet {
                         + "                                                    <p></p>\n"
                         + "                                                    <p>\n"
                         + "                                                        <button class=\"btn btn-danger\" onclick=\"deleteFunction(" + temp.getId() + ")\">Delete</button>\n"
-                        + "                                                        <button class=\"btn btn-primary\" onclick=\"repostFunction(" + temp.getId() + ")\">Re-post</button>\n"
+                        + "                                                        <button class=\"btn btn-success\" onclick=\"repostFunction(" + temp.getId() + ")\">Re-post</button>\n"
                         + "                                                    </p>\n"
                         + "                                                </div>\n"
                         + "                                            </div>\n"
@@ -105,7 +105,7 @@ public class CustomizeArticle extends HttpServlet {
             if (articleNotDisplayed.size() == 0) {
                 out.println("<div class=\"row\">\n"
                         + "                                        <div class=\"col-md-1\"></div>\n"
-                        + "                                        <div class=\"col-md-10\"><h4>Empty</h4></div>\n"
+                        + "                                        <div class=\"col-md-10\"><h4>No articles hidden</h4></div>\n"
                         + "                                    </div>");
             }
             out.println("</div>\n"

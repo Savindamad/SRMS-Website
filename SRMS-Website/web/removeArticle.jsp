@@ -73,10 +73,10 @@
                     <div class="tabbable" id="tabs-638888">
                         <ul class="nav nav-tabs">
                             <li class="active">
-                                <a href="#panel-621843" data-toggle="tab">Display</a>
+                                <a href="#panel-621843" data-toggle="tab">Displayed</a>
                             </li>
                             <li>
-                                <a href="#panel-733178" data-toggle="tab">Not display</a>
+                                <a href="#panel-733178" data-toggle="tab">Hidden</a>
                             </li>
                         </ul>
                         <div class="tab-content">
@@ -101,7 +101,7 @@
                                                     <p></p>
                                                     <p>
                                                         <button class="btn btn-danger" onclick="deleteFunction(<% out.print(temp.getId()); %>)">Delete</button>
-                                                        <button class="btn btn-primary" onclick="removeFunction(<% out.print(temp.getId()); %>)">Remove</button>
+                                                        <button class="btn btn-primary" onclick="removeFunction(<% out.print(temp.getId()); %>)">Hide</button>
                                                     </p>
                                                 </div>
                                             </div>
@@ -113,7 +113,7 @@
                                     %>
                                     <div class="row">
                                         <div class="col-md-1"></div>
-                                        <div class="col-md-10"><h4>Empty</h4></div>
+                                        <div class="col-md-10"><h4>No articles displayed</h4></div>
                                     </div>
                                     <%
                                         }
@@ -141,7 +141,7 @@
                                                     <p></p>
                                                     <p>
                                                         <button class="btn btn-danger" onclick="deleteFunction(<% out.print(temp.getId()); %>)">Delete</button>
-                                                        <button class="btn btn-primary" onclick="repostFunction(<% out.print(temp.getId()); %>)">Re-post</button>
+                                                        <button class="btn btn-success" onclick="repostFunction(<% out.print(temp.getId()); %>)">Re-post</button>
                                                     </p>
                                                 </div>
                                             </div>
@@ -153,7 +153,7 @@
                                     %>
                                     <div class="row">
                                         <div class="col-md-1"></div>
-                                        <div class="col-md-10"><h4>Empty</h4></div>
+                                        <div class="col-md-10"><h4>No articles hidden</h4></div>
                                     </div>
                                     <%
                                         }

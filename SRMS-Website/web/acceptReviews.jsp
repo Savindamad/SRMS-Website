@@ -88,9 +88,8 @@
                                         <h3><% out.print(userName); %></h3>
                                         <p><% out.print(comment); %></p>
                                         <div>
-                                            <input type="hidden" id="commentId" value="<% out.print(commentId); %>">
-                                            <button class="btn btn-primary" id="accept">Accept</button>
-                                            <button class="btn btn-danger" id="reject">Reject</button>
+                                            <button class="btn btn-primary" onclick="acceptFunction(<% out.print(commentId); %>)">Accept</button>
+                                            <button class="btn btn-danger" onclick="rejectFunction(<% out.print(commentId); %>)">Reject</button>
                                         </div>
                                     </div>
                                 </div>
@@ -102,7 +101,7 @@
                         %>
                         <div class="col-md-1"></div>
                         <div>
-                            <h4>Empty</h4>
+                            <h4>No new reviews</h4>
                         </div>
                         <%
                             }

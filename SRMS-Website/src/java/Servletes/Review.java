@@ -42,29 +42,34 @@ public class Review extends HttpServlet {
                 String comment = reviewComment.getComment();
                 String userName = reviewComment.getName();
                 String commentId = reviewComment.getCommentId();
+                out.println("<div class=\"row\">\n"
+                        + "                            <div class=\"col-md-1\"></div>\n"
+                        + "                            <div class=\"col-md-8\">\n"
+                        + "                                <div class=\"thumbnail\">\n"
+                        + "                                    <div class=\"caption\">\n"
+                        + "                                        <h3>"+userName+"</h3>\n"
+                        + "                                        <p>"+comment+"</p>\n"
+                        + "                                        <div>\n"
+                        + "                                            <button class=\"btn btn-primary\" onclick=\"acceptFunction("+commentId+")\">Accept</button>\n"
+                        + "                                            <button class=\"btn btn-danger\" onclick=\"rejectFunction("+commentId+")\">Reject</button>\n"
+                        + "                                        </div>\n"
+                        + "                                    </div>\n"
+                        + "                                </div>\n"
+                        + "                            </div>\n"
+                        + "                        </div>");
+            }
 
-                out.println("<div class=\"row\">");
-                out.println("<div class=\"col-md-1\"></div>");
-                out.println("<div class=\"col-md-8\">");
-                out.println("<div class=\"thumbnail\">");
-                out.println("<div class=\"caption\">");
-                out.println("<h3>"+userName+"</h3>");
-                out.println("<p>"+comment+"</p>");
-                out.println("<div>");
-                out.println("<input type=\"hidden\" id=\"commentId\" value=\""+commentId+"\">");
-                out.println("<button class=\"btn btn-primary\" id=\"accept\">Accept</button>");
-                out.println("<button class=\"btn btn-danger\" id=\"reject\">Reject</button>");
-                out.println("</div>");
-                out.println("</div>");
-                out.println("</div>");
-                out.println("</div>");
-                out.println("</div>");
+            if (comments.size() == 0) {
+                out.println("<div class=\"col-md-1\"></div>\n"
+                        + "                        <div>\n"
+                        + "                            <h4>No new reviews</h4>\n"
+                        + "                        </div>");
             }
 
         }
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

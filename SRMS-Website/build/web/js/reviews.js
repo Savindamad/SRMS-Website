@@ -27,4 +27,32 @@ $(document).ready(function () {
         });
     });
 });
+function acceptFunction(id) {
+    $.ajax({
+        type: "POST",
+        url: 'Review',
+        data: {
+            commentId: id,
+            status: "accept"
+
+        },
+        success: function (responseText) {
+            $('#reviews').html(responseText);
+        }
+    });
+}
+function rejectFunction(id) {
+    $.ajax({
+        type: "POST",
+        url: 'Review',
+        data: {
+            commentId: id,
+            status: "reject"
+
+        },
+        success: function (responseText) {
+            $('#reviews').html(responseText);
+        }
+    });
+}
 
