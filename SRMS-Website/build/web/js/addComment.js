@@ -9,6 +9,7 @@ $(document).ready(function () {
                     username: $('#username').val()
                 },
                 success: function (responseText) {
+                    $('#commentRe').html(responseText);
                 }
             });
             document.getElementById("comment").value = "";

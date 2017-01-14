@@ -163,7 +163,7 @@
                                                         <button type="submit" class="btn btn-lg btn-primary" id="commentPost">Post</button>
                                                     </div>  
                                                 </div>
-                                                <div style="margin-top : 30px">
+                                                <div style="margin-top : 30px" id="commentRe">
                                                     <%
                                                         for (int i = 0; i < comments.size(); i++) {
                                                             String cusName = comments.get(i).getName();
