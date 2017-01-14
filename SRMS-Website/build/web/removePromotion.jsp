@@ -36,7 +36,7 @@
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="admin_panel.jsp">
-                            <img alt="Brand" src="...">
+                            <img style="width : 250px; margin-top: -25px; margin-left:20px;" src="images/srms_logo1.png">
                         </a>
                     </div>
                     <div class="navbar-right" style="margin-right: 30px">

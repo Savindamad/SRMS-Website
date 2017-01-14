@@ -32,12 +32,12 @@
             ArrayList<Comment> comments = new ArrayList<Comment>();
             comments = reviews.getReviews();
         %>
-        <nav class="navbar navbar-default" style="margin-top:-2px; border-radius: 0px; border-color: #F8F8F8">
+        <nav class="navbar navbar-inverse" style="margin-top:-2px; border-radius: 0px; border-color: #F8F8F8">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="admin_panel.jsp">
-                            <img alt="Brand" src="...">
+                            <img style="width : 250px; margin-top: -25px; margin-left:20px;" src="images/srms_logo1.png">
                         </a>
                     </div>
                     <div class="navbar-right" style="margin-right: 30px">
