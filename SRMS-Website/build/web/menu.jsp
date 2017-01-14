@@ -122,7 +122,7 @@
                     <div class="col-md-6">
                         <div id="custom-search-input">
                             <div class="input-group col-md-12">
-                                <input id="searchName" type="text" class="form-control input-lg" placeholder="Search food items" />
+                                <input id="searchName" type="text" class="form-control input-lg" placeholder="Search food items" oninput="searchFunction(this.value);"/>
                                 <span class="input-group-btn">
                                     <div>
                                         <input  id="searchBtn" class="btn btn-info btn-lg" value="Search" type="button">

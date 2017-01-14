@@ -12,3 +12,16 @@ $(document).ready(function () {
         });
     });
 });
+
+function searchFunction(search) {
+    $.ajax({
+        url: 'SearchMenu',
+        type: 'POST',
+        data: {
+            searchName: search
+        },
+        success: function (responseText) {
+            $('#imagediv').html(responseText);
+        }
+    });
+}
