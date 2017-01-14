@@ -83,7 +83,7 @@
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="panel-621843">
-                                <div id="" style="margin-top: 40px">
+                                <div style="margin-top: 40px">
                                     <%                                        Promotion promotions = new Promotion();
                                         ArrayList<PromotionDetails> proDetails = new ArrayList<PromotionDetails>();
                                         proDetails = promotions.getPromotions();

@@ -85,4 +85,56 @@ public class Artical {
         }
     }
     
+    public void deleteArticle(String id){
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = "delete from article where id = ?";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, id);
+
+            preparedStmt.execute();
+            myconnection.close();
+        } catch (Exception e) {
+        }
+    }
+    
+    public void removeArticle(String id){
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = "update article set status = ? where id = ?";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, "NOT-DISPLAY");
+            preparedStmt.setString(2, id);
+
+            preparedStmt.executeUpdate();
+
+            preparedStmt.execute();
+            
+            myconnection.close();
+        } catch (Exception e) {
+        }
+        
+    }
+    public void repostArticle(String id){
+        try {
+            DBConnection dbconn = new DBConnection();
+            Connection myconnection = dbconn.connection();
+
+            String query = "update article set status = ? where id = ?";
+            PreparedStatement preparedStmt = myconnection.prepareStatement(query);
+            preparedStmt.setString(1, "DISPLAY");
+            preparedStmt.setString(2, id);
+
+            preparedStmt.executeUpdate();
+
+            preparedStmt.execute();
+            
+            myconnection.close();
+        } catch (Exception e) {
+        }
+    }
 }

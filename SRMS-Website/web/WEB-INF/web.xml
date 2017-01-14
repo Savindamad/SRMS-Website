@@ -57,6 +57,10 @@
         <servlet-name>Promotions</servlet-name>
         <servlet-class>Servletes.Promotions</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CustomizeArticle</servlet-name>
+        <servlet-class>Servletes.CustomizeArticle</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -108,6 +112,10 @@
     <servlet-mapping>
         <servlet-name>Promotions</servlet-name>
         <url-pattern>/Promotions</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomizeArticle</servlet-name>
+        <url-pattern>/CustomizeArticle</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

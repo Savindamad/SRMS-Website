@@ -11,23 +11,14 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-
-        <title>Admin panel</title>
-        <meta charset="utf-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
         <title>Admin panel</title>
         <link href="assets/css/bootstrap.css" rel="stylesheet" />
-        <link href="assets/css/font-awesome.css" rel="stylesheet" />
-        <link href="assets/css/style.css" rel="stylesheet" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+        <link href="assets/css/style.css" rel="stylesheet" /> 
     </head>
     <body>
         <script src="js/jquery.js" type="text/javascript"></script>
-        <script type="text/javascript" src="js/addComment.js"></script>
+        <script type="text/javascript" src="js/customizeArticle.js"></script>
         <%
             HttpSession sessionUser = request.getSession(false);
             String name = (String) sessionUser.getAttribute("name");
@@ -35,8 +26,6 @@
             if (name == null) {
                 request.setAttribute("login", "fail");
                 response.sendRedirect("admin_login.jsp?login=fail");
-            } else {
-
             }
 
         %>
@@ -78,7 +67,7 @@
             </div>
         </nav>
         <div class="container-fluid" style="margin-top: 50px">
-            <div class="row">
+            <div class="row" id="articleReplaceId">
                 <div class="col-md-1"></div>
                 <div class="col-md-10">
                     <div class="tabbable" id="tabs-638888">
@@ -111,9 +100,8 @@
                                                     <a href="<% out.print(temp.getArticleLink()); %>">Link</a>
                                                     <p></p>
                                                     <p>
-                                                        <input type="hidden" value="<% out.print(temp.getId()); %>" id="promoId"/>
-                                                        <button class="btn btn-danger" id="deleteArticle">Delete</button>
-                                                        <button class="btn btn-primary" id="removeArticle">Remove</button>
+                                                        <button class="btn btn-danger" onclick="deleteFunction(<% out.print(temp.getId()); %>)">Delete</button>
+                                                        <button class="btn btn-primary" onclick="removeFunction(<% out.print(temp.getId()); %>)">Remove</button>
                                                     </p>
                                                 </div>
                                             </div>
@@ -128,7 +116,7 @@
                                         <div class="col-md-10"><h4>Empty</h4></div>
                                     </div>
                                     <%
-                                    }
+                                        }
                                     %>
                                 </div>
                             </div>
@@ -152,9 +140,8 @@
                                                     <a href="<% out.print(temp.getArticleLink()); %>">Link</a>
                                                     <p></p>
                                                     <p>
-                                                        <input type="hidden" value="<% out.print(temp.getId()); %>" id="promoId"/>
-                                                        <button class="btn btn-danger" id="deleteArticle">Delete</button>
-                                                        <button class="btn btn-primary" id="repostArticle">Re-post</button>
+                                                        <button class="btn btn-danger" onclick="deleteFunction(<% out.print(temp.getId()); %>)">Delete</button>
+                                                        <button class="btn btn-primary" onclick="repostFunction(<% out.print(temp.getId()); %>)">Re-post</button>
                                                     </p>
                                                 </div>
                                             </div>
@@ -169,7 +156,7 @@
                                         <div class="col-md-10"><h4>Empty</h4></div>
                                     </div>
                                     <%
-                                    }
+                                        }
                                     %>
                                 </div>
                             </div>
@@ -178,5 +165,8 @@
                 </div>
             </div>
         </div>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/scripts.js"></script>
     </body>
 </html>
