@@ -48,7 +48,7 @@ public class Reviews {
             DBConnection dbconn = new DBConnection();
             Connection myconnection = dbconn.connection();
 
-            String sqlString = "SELECT * FROM review WHERE status = 'ACCEPTED'";
+            String sqlString = "SELECT * FROM review WHERE status = 'ACCEPTED' order by comment_id desc";
 
             Statement myStatement = myconnection.createStatement();
             ResultSet rs = myStatement.executeQuery(sqlString);

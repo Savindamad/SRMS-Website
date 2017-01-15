@@ -43,9 +43,18 @@ public class AddComment extends HttpServlet {
                         + "                                                        <div class=\"col-md-1\"></div>\n"
                         + "                                                        <div class=\"col-md-10\">\n"
                         + "                                                            <div class=\"media\">\n"
-                        + "                                                                <a href=\"#\" class=\"pull-left\"><img alt=\"Bootstrap Media Preview\" src=\"http://lorempixel.com/64/64/\" class=\"media-object\" /></a>\n"
+                        + "                                                                <!-- edited   -->\n" +
+"                                                                                           <div class=\"col-md-1 col-sm-1 hidden-xs\">\n" +
+"                                                                                           <figure class=\"thumbnail\">\n" +
+"                                                                                               <img class=\"img-responsive\" src=\"http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg\" />\n" +
+"                                                                                               <figcaption class=\"text-center\"></figcaption>\n" +
+"                                                                                           </figure>\n" +
+"                                                                                           </div>\n" +
+"                                                                                           <!--*******************-->\n"
+                        
+                        
                         + "                                                                <div class=\"media-body\">\n"
-                        + "                                                                    <h4 class=\"media-heading\"><% out.print(cusName); %></h4>\n"
+                        + "                                                                    <h4 class=\"media-heading\">" + cusName + "</h4>\n"
                         + "                                                                    <p>" + cusComment + "</p>\n"
                         + "                                                                    <h5>" + time + "</h5>\n"
                         + "                                                                </div>\n"
