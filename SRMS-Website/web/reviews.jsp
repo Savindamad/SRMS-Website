@@ -175,7 +175,17 @@
                                                         <div class="col-md-1"></div>
                                                         <div class="col-md-10">
                                                             <div class="media">
-                                                                <a href="#" class="pull-left"><img alt="Bootstrap Media Preview" src="http://lorempixel.com/64/64/" class="media-object" /></a>
+                                                                
+                                                                <!-- edited   -->
+                                                                <div class="col-md-1 col-sm-1 hidden-xs">
+                                                                    <figure class="thumbnail">
+                                                                        <img class="img-responsive" src="http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg" />
+                                                                        <figcaption class="text-center"></figcaption>
+                                                                    </figure>
+                                                                </div>
+                                                                <!--*******************-->
+                                                                
+                                                                
                                                                 <div class="media-body">
                                                                     <h4 class="media-heading"><% out.print(cusName); %></h4>
                                                                     <p><% out.print(cusComment); %></p>
