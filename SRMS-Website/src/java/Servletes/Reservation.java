@@ -48,7 +48,7 @@ public class Reservation extends HttpServlet {
             
             out.write("<div class=\"col-md-4\">");
             out.write("<div class=\"thumbnail\">");
-            out.write("<img alt=\"Bootstrap Thumbnail First\" src=\"http://lorempixel.com/output/people-q-c-600-200-1.jpg\" />");
+            out.write("<img alt=\"Bootstrap Thumbnail First\" src=\"images/slide1/p4.jpg\" />");
             out.write("</div>");
             out.write("</div>");
             out.write("<div class=\"col-md-8\">");
@@ -56,7 +56,7 @@ public class Reservation extends HttpServlet {
             out.write("<div class=\"caption\">");
             out.write("<h3>Table number : "+bestCombinations.get(i).getTableNo()+"</h3>");
             out.write("<p>Number of seats : "+bestCombinations.get(i).getNumOfSeats()+"</p>");
-            out.write("<p><button class=\"btn btn-primary\" href=\"reserveTable\">Book</button></p>");
+            out.write("<p><a class=\"btn btn-primary\" href=\"payment.jsp\">Book</a></p>");
             out.write("</div>");
             out.write("</div>");
             out.write("</div>");
