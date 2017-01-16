@@ -163,76 +163,81 @@
                                                         <button type="submit" class="btn btn-lg btn-primary" id="commentPost">Post</button>
                                                     </div>  
                                                 </div>
-                                                <div style="margin-top : 30px" id="commentRe">
-                                                    <%
-                                                        for (int i = 0; i < comments.size(); i++) {
-                                                            String cusName = comments.get(i).getName();
-                                                            String cusComment = comments.get(i).getComment();
-                                                            String time = comments.get(i).getDate();
+                                                <div style="margin-top : 30px">
+                                                    <div id="commentRe" style="margin-left: 100px; color:orange;"></div>
+                                                </div>
+                                            </div>
+                                            <div style="margin-top : 30px">
+                                                <%
+                                                    for (int i = 0; i < comments.size(); i++) {
+                                                        String cusName = comments.get(i).getName();
+                                                        String cusComment = comments.get(i).getComment();
+                                                        String time = comments.get(i).getDate();
 
-                                                    %>
-                                                    <div class="row" style="margin-top : 20px">
-                                                        <div class="col-md-1"></div>
-                                                        <div class="col-md-10">
-                                                            <div class="media">
-                                                                
-                                                                <!-- edited   -->
-                                                                <div class="col-md-1 col-sm-1 hidden-xs">
-                                                                    <figure class="thumbnail">
-                                                                        <img class="img-responsive" src="http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg" />
-                                                                        <figcaption class="text-center"></figcaption>
-                                                                    </figure>
-                                                                </div>
-                                                                <!--*******************-->
-                                                                
-                                                                
-                                                                <div class="media-body">
-                                                                    <h4 class="media-heading"><% out.print(cusName); %></h4>
-                                                                    <p><% out.print(cusComment); %></p>
-                                                                    <h5><% out.print(time); %></h5>
-                                                                </div>
+                                                %>
+                                                <div class="row" style="margin-top : 20px">
+                                                    <div class="col-md-1"></div>
+                                                    <div class="col-md-10">
+                                                        <div class="media">
+
+                                                            <!-- edited   -->
+                                                            <div class="col-md-1 col-sm-1 hidden-xs">
+                                                                <figure class="thumbnail">
+                                                                    <img class="img-responsive" src="http://www.keita-gaming.com/assets/profile/default-avatar-c5d8ec086224cb6fc4e395f4ba3018c2.jpg" />
+                                                                    <figcaption class="text-center"></figcaption>
+                                                                </figure>
+                                                            </div>
+                                                            <!--*******************-->
+
+
+                                                            <div class="media-body">
+                                                                <h4 class="media-heading"><% out.print(cusName); %></h4>
+                                                                <p><% out.print(cusComment); %></p>
+                                                                <h5><% out.print(time); %></h5>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <%
-                                                        }
-                                                    %>
+                                                    <div class="col-md-1"></div>
                                                 </div>
+                                                <%
+                                                    }
+                                                %>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-1">
-                        </div>
+                    </div>
+                    <div class="col-md-1">
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer">
-            <div class="wrap">
-                <div class="footer-grid">
-                    <h3></h3>
-                </div>
-                <div class="footer-grid center-grid">
-                    <h3></h3>
-                    <ul>
-
-                    </ul>
-                </div>
-                <div class="footer-grid"></div>
-                <div class="clear"> </div>
+    </div>
+    <div class="footer">
+        <div class="wrap">
+            <div class="footer-grid">
+                <h3></h3>
             </div>
+            <div class="footer-grid center-grid">
+                <h3></h3>
+                <ul>
+
+                </ul>
+            </div>
+            <div class="footer-grid"></div>
             <div class="clear"> </div>
         </div>
-        <div class="copy-right">
-            <div class="top-to-page">
-                <a href="#top" class="scroll"></a>
-                <div class="clear"></div>
-            </div>	
-        </div>                                        
-    </body>
+        <div class="clear"> </div>
+    </div>
+    <div class="copy-right">
+        <div class="top-to-page">
+            <a href="#top" class="scroll"></a>
+            <div class="clear"></div>
+        </div>	
+    </div>                                        
+</body>
 </html>
 
 
