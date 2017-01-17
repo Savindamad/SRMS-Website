@@ -110,7 +110,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">
-                                        Email address
+                                       Birthday
                                     </label>
                                     <input class="dob" type="date"  name="birthday" id="birthday" required="required" onblur='validateDate()'>
                                 </div>

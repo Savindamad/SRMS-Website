@@ -4,6 +4,9 @@
 <html>
     <head><title> Login Page </title>
         <style>
+            body {
+               background-color: #F5F5F5;
+            }
             @import url(http://fonts.googleapis.com/css?family=Roboto);
             .loginmodal-container {
                 padding: 30px;
@@ -11,7 +14,7 @@
                 width: 100% !important;
                 background-color: #F7F7F7;
                 margin: 0 auto;
-                margin-top: 50px;
+                margin-top: 100px;
                 border-radius: 2px;
                 box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
                 overflow: hidden;
@@ -118,7 +121,8 @@
         <script src="js/validate.js"></script>
         <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
-                <div class="loginmodal-container">
+                  <img alt="Bootstrap Image Preview" style="float:left; margin-left: 150px; margin-top: 50px; width: 500px" src="images/slide1/logo.png" />
+                <div class="loginmodal-container
                     <img ${pageContext.request.contextPath} style="margin-left:60px;"  src="img/login.png">
                     <form name="login" onSubmit="return validateLoginForm();" action="Login" method="post">
                         <input type="text" name="email" onblur='validateEmail()' placeholder="Username" required="required"><span id="val_email"></span>
