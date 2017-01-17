@@ -30,7 +30,7 @@
         height: 300px;
     }
 </style>
-<body>
+<body style="background-color : #edeaea">
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/searchMenu.js" type="text/javascript"></script>
     <script src="js/rating.js" type="text/javascript"></script>

@@ -26,7 +26,7 @@
             margin-top: 50px;
         }
     </style>
-    <body>
+    <body style="background-color : #edeaea">
         <script src="js/jquery.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/addComment.js"></script>
         <%
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid" style="margin-top : 80px">
+        <div class="container-fluid" style="margin-top : 80px;">
             <div class="row">
                 <div class="col-md-12">
                     <div class="row">

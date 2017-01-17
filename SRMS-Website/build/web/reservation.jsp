@@ -22,7 +22,7 @@
             }
         </style>
     </head>
-    <body>
+    <body style="background-color: #edeaea">
         <%
             HttpSession sessionUser = request.getSession(false);
             String email = (String) sessionUser.getAttribute("email");

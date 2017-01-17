@@ -125,7 +125,6 @@
                         <input type="password" name="password" placeholder="Password" required="required">
                         <input type="submit" name="login" class="login loginmodal-submit" value="Login">
                     </form>
-
                     <div class="login-help">
                         <a href="signup.jsp">Signup Here </a> 
                     </div>

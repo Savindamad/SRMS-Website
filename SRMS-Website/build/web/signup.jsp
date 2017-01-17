@@ -5,12 +5,12 @@
     <head>
         <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Pontano+Sans" rel="stylesheet">
+        
+        <link href="assets/css/bootstrap.css" rel="stylesheet" />
+        <link href="assets/css/font-awesome.css" rel="stylesheet" />
+        <link href="assets/css/style.css" rel="stylesheet" />
         <style>
-            body {
-                background-image:url(img/res.jpg);
-                background-size: cover;
-                background-repeat: no-repeat;
-            }
+
             table {
                 border: 1px solid black;
                 padding: 10px 10px;
@@ -84,37 +84,58 @@
         </style>
 
     </head>
-    <body>
+    <body style="background-color: #F5F5F5">
         <script src="js/validate.js"></script>
-        <form action="Register" method="post" onsubmit="return validateSignupForm();" name="signUp">
-            <table>
-                <tr>
-                    <td colspan="2"><img class="img" src="img/login.png"</td>
-                </tr>
-                <tr>
-                    <td colspan="2"> <input type="text" name="name" id="name" placeholder="Name" required="required"></td>
-                </tr>
-                <tr>
-                    <td colspan="2"> <input type="text" name="email" id="email" placeholder="E-mail" required="required" onblur='validateEmail()'></td>
-                </tr>             
-                <tr>
-                    <td colspan="2"><label class="l1">Date of Birth</label> <input class="dob" type="date"  name="birthday" id="birthday" required="required" onblur='validateDate()'></td>
-                </tr>              
-                <tr>
-                    <td colspan="2"> <input type="text" name="contact_no" id="contact_no" placeholder="Mobile Number" required="required" onblur='validateContactNo()'></td>
-                </tr>              
-                <tr>
-                    <td colspan="2"> <input type="password" name="password" id="password" placeholder="Password" required="required" onblur='validatePassword()'></td>
-                </tr>
-                <tr>
-                    <td colspan="2"> <input type="password" name="rePassword" id="repassword" placeholder="Retype your Password" required="required" onblur='validateRePassword()'></td>
-                </tr>
 
-                <tr>
-                    <td colspan="2" align="center"> <input class="button" type="submit" value="Submit" ></td>
-                </tr>
-
-            </table>
-        </form>
+        <div class="container-fluid" style="margin-top : 100px">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-5">
+                            <img alt="Bootstrap Image Preview" style="margin-top: 50px; width: 500px" src="images/slide1/logo.png" />
+                        </div>
+                        <div class="col-md-3" style="background-color : #afaeae">
+                            <form role="form" action="Register" method="post" onsubmit="return validateSignupForm();" name="signUp">
+                                
+                                <div class="form-group">
+                                    <p><br></p>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="name" id="name" placeholder="Name" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="email" id="email" placeholder="E-mail" required="required" onblur='validateEmail()'>
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">
+                                        Email address
+                                    </label>
+                                    <input class="dob" type="date"  name="birthday" id="birthday" required="required" onblur='validateDate()'>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" name="contact_no" id="contact_no" placeholder="Mobile Number" required="required" onblur='validateContactNo()'>
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" name="password" id="password" placeholder="Password" required="required" onblur='validatePassword()'>
+                                </div>
+                                <div class="form-group">
+                                    <td colspan="2"> <input type="password" name="rePassword" id="repassword" placeholder="Retype your Password" required="required" onblur='validateRePassword()'>
+                                </div>
+                                <button type="submit" class="btn btn-default" style="width : 300px">
+                                    SignUp
+                                </button>
+                                <div class="form-group">
+                                    <p><br></p>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
